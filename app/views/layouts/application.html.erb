@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	  <title>SmartHiking</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	   <!--Meta Tags -->
+    <meta name="description" content="The best way to find a route" />
+    <meta name="keywords" content="hikker, app, routes, helper, alerts, weather, nature" />
+    <meta name="author" content="Héctor León, hectorleon.designer@gmail.com" />
+    <meta name="Classification" content="Business" />
+    <meta name='copyright' content='Tibicenas Design' />
+    <meta name="coverage" content="worldwide" />
+    <meta name="owner" content="Héctor León" />
+    <meta name='target' content='all' />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="revisit-after" content="1 week" />
+    <!-- Sitemap -->
+    <link rel="alternate" type="application/xml" title="Sitemap" href="sitemap.xml" />
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+ 		<!-- ======== Icons ============= -->
+    <!-- 16x16 -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- 32x32 -->
+    <link rel="shortcut icon" href="/favicon.png">
+    <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+    <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+    <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+    <!-- 512x512 dock de MAC // En title: Nombre de Marca o Empresa -->
+    <link rel="fluid-icon" href="/fluidicon.png" title="Tuí-na Las Palmas">
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Windows 8 / RT 144x144 -->
+    <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png" />
+    <meta name="msapplication-TileColor" content="#000" />
+    <meta http-equiv="cleartype" content="on" />
+	</head>
+<!-- ======================== WEB ========================= -->
+	<body>
+<!-- NAV -->
+    <nav role="navigation" id="js-nav--top" class="nav--top">
+      <div class="nav--top__container">
+
+        <div id="js-btn--burguer" class="btn--burguer">
+          <div>
+            <span class="the-burguer"></span>
+            <span class="the-burguer"></span>
+            <span class="the-burguer"></span>
+          </div>
+        </div>
+
+	      <ul class="nav--top__list">
+          <li>
+            <a class="js__page-scroll" title="Home" href="#page--top">
+              <span class="icon"><i aria-hidden="true" class="icon__logo"></i></span>
+              <i class="icon-quill"></i> <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="js__page-scroll" title="Servicios" href="#services">
+              <span class="icon"><i aria-hidden="true" class="icon__services"></i></span>
+              <span>Servicios</span>
+            </a>
+          </li>
+          <li>
+            <a class="js__page-scroll" title="Routes" href="#team">
+              <span class="icon"><i aria-hidden="true" class="icon__team"></i></span>
+              <span>Equipo</span>
+            </a>
+          </li>
+          <li>
+            <a class="js__page-scroll" title="Contact" href="#portfolio">
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a class="js__page-scroll" title="Contact" href="#contact">
+              <span class="icon"><i aria-hidden="true" class="icon__contact"></i></span>
+              <span>Contacto</span>
+            </a>
+          </li>
+	      </ul>
+	      <ul class="language-list">
+          <li><a href="#">ES</a></li>
+          <li><a href="#">EN</a></li>
+	      </ul>
+      </div>
+    </nav>
+
+		<section class="main-content" role="main">
+      <%= link_to "aboutus", aboutus_path %>
+      <%= link_to "ES", url_for(locale: "es") %>
+      <%= link_to "EN", url_for(locale: "en") %>
+
+			<%= yield %>
+		</section>
+ 
+   <footer role="contentinfo"> 
+    <%= t(:hello) %>
+      <small>Copyright © Héctor León Freelance Designer 2014</small>
+      <small>
+        <a class="footer__link" href="#">Privacy Policy</a>
+        <a class="footer__link" href="#">Terms of Use</a>
+      </small>
+    </footer>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+header[role=banner] {
+	background-image: image-url("header--01.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	width: 100%;
+	height: 100vh;
+}
+
+.title,
+.subtitle {
+	text-align: center;
+	color: white;
+}
+
+.title {
+	padding-top: 7%;
+}
+
+
+.subtitle {
+	padding-bottom: 7%;
+}
