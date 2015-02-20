@@ -15,7 +15,7 @@
 
   }
 
-  [class^="item-"], [class*=" item-"] {
+  [class^="item-"], [class*=" item-"], [class^="xs-item-"], [class*=" xs-item-"] {
     flex-shrink: 0;
       flex-grow: 1;
       margin: $gap / 2;
@@ -27,14 +27,15 @@
   }
 
 
+
   @for $i from 1 to ($grid-size + 1) {
       // Total size (We would need to substract the margin to avoid wrapping);
     $width : 100 / $grid-size * $i * 1%;
 
     .item-#{$i} {
       flex-basis: 100%;
-        @include media-query-bp($bp3) {
-          flex:0 0 calc(#{$width} - #{$gap});
+      @include media-query-bp($bp3) {
+        flex:0 0 calc(#{$width} - #{$gap});
       }
     }
   }

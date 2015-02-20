@@ -58,32 +58,29 @@
           </div>
         </div>
 
-	      <ul class="nav--top__list">
+	      <ul id="js-nav--toggle" class="nav--top_list">
           <li>
-            <a class="js__page-scroll" title="Home" href="#page--top">
-              <span class="icon"><i aria-hidden="true" class="icon__logo"></i></span>
-              <i class="icon-quill"></i> <span>Home</span>
+            <a class="link--top" title="Home" href="#page--top">
+              <span>Home</span>
             </a>
           </li>
           <li>
-            <a class="js__page-scroll" title="Servicios" href="#services">
-              <span class="icon"><i aria-hidden="true" class="icon__services"></i></span>
+            <a class="link--top" title="Servicios" href="#services">
               <span>Servicios</span>
             </a>
           </li>
           <li>
-            <a class="js__page-scroll" title="Routes" href="#team">
-              <span class="icon"><i aria-hidden="true" class="icon__team"></i></span>
+            <a class="link--top" title="Routes" href="#team">
               <span>Equipo</span>
             </a>
           </li>
           <li>
-            <a class="js__page-scroll" title="Contact" href="#portfolio">
+            <a class="link--top" title="Contact" href="#portfolio">
               <span>Portfolio</span>
             </a>
           </li>
           <li>
-            <a class="js__page-scroll" title="Contact" href="#contact">
+            <a class="link--top" title="Contact" href="#contact">
               <span class="icon"><i aria-hidden="true" class="icon__contact"></i></span>
               <span>Contacto</span>
             </a>
@@ -97,13 +94,13 @@
     </nav>
 
 		<section class="main-content" role="main">
+
+      <%= yield %>
+    </section>
+ 
       <%= link_to "aboutus", aboutus_path %>
       <%= link_to "ES", url_for(locale: "es") %>
       <%= link_to "EN", url_for(locale: "en") %>
-
-			<%= yield %>
-		</section>
- 
    <footer role="contentinfo"> 
     <%= t(:hello) %>
       <small>Copyright © Héctor León Freelance Designer 2014</small>
@@ -112,5 +109,6 @@
         <a class="footer__link" href="#">Terms of Use</a>
       </small>
     </footer>
+    <div id="js-lightbox" class="lightbox"></div>
 	</body>
 </html>

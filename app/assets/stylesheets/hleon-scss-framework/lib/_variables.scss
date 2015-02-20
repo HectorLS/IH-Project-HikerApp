@@ -181,7 +181,7 @@ $cyan             : rgb(30,226,231);  /*Cyan       #1ee2e7 hsl(181,87,91) CMYK (
 // Links  /////////////////////////////////////////////////
 $linkcolor 		    : $white;
 $linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorvisited : $basecolor;
+$linkcolorvisited : $white;
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
 
 

@@ -61,6 +61,9 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 /* HEADER  ================================================================== */
 @import "organisms/header.scss";
 
+/* NAVBAR  ================================================================== */
+@import "molecules/navbar.scss";
+
 /* FOOTER  ================================================================== */
 @import "organisms/footer.scss";
 
@@ -69,10 +72,24 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 	background-color: cyan;
 }
 
-nav[role=navigation] {
-	background-color: $basecolor;
+.main-content {
+	margin-top: 3em;
 }
 
-.nav--top__list, .language-list {
-	display: none;
+
+.lightbox{
+  opacity: 0;
+  top: 3em;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  transition: 500ms;
+  background-color: black;
+}
+.js-lightbox--active{
+  opacity: .4;
+}
+.js-block-scroll{
+  overflow: hidden;
 }
