@@ -14,9 +14,8 @@
 
 
 /* ===== BASE ===== */
-@import "base/content.scss";
 @import "base/reset.scss";
-@import "base/debug.scss";
+// @import "base/debug.scss";
 
 
 /**
@@ -25,7 +24,7 @@
 @import "elements/figure.scss";
 @import "elements/forms.scss";
 @import "elements/links.scss";
-@import "elements/tables.scss";
+// @import "elements/tables.scss";
 @import "elements/tipography.scss";
 
 
@@ -35,8 +34,12 @@
 @import "addons/fonticon.scss";
 @import "addons/grid.scss";
 @import "addons/img.scss";
+@import "addons/navigation.scss";
 @import "addons/notifications.scss";
-@import "addons/pagination.scss";
-
+// @import "addons/pagination.scss";
 
 @import "layouts/site.scss";
+
+
+// Javascript Effects should be last one to take priority over all
+@import "addons/js-events.scss";
