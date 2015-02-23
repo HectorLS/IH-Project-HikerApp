@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-
-  tralari: "lafjsaldgjañgkeañgkesñhgkeñǵkrshkŕthkrśt"
+  hello: "Hello"
+  goodmorning: "Good morning"
+  index_subtitle: "The clever way, a voyage guardian with you"
+  index_description: "pjasfj osafjsfas s"
