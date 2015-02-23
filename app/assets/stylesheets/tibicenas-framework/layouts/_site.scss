@@ -67,9 +67,11 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 
 .language-list {
   display: inline-block;
-  min-width: 25%;
+  text-align: right;
+  min-width: 15%;
   max-width: 35%;
   margin: 0;
+  padding: 0;
   position: absolute;
   right: 0;
   top: .7em;
@@ -77,6 +79,18 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 
 .language-list li {
   display: inline-block;
-  padding: 1% 3%;
-  margin: 0 2%;
+  padding: .1em .1em;
+  margin: 0 .2em;
+}
+
+.language-list li:last-child {
+  margin-right: .4em;
+}
+
+
+
+.container_map {
+  width: 100%;
+  background-color: red;
+  padding: 15px
 }

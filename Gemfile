@@ -14,9 +14,16 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 #Google maps gem
-gem 'gmaps4rails'
-#Underscore (gmaps4rails depends of this)
-gem 'underscore-rails'
+# gem 'gmaps4rails'
+# #Underscore (gmaps4rails depends of this)
+# gem 'underscore-rails'
+# #Coffeescript (gmaps4rails depends of this)
+# gem 'coffee-rails'
+# #geocoder (gmaps4rails depends of this)
+# gem 'geocoder'
+
+# geocoded_by :campodetabla
+# after_validantion :geocode
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
