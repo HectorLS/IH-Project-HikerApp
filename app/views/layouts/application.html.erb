@@ -64,29 +64,24 @@
 
         <ul id="js-menu--toggle" class="nav--top_list">
           <li>
-            <a class="link--top" title="Home" href="#page--top">
-              <span>Home</span>
-            </a>
-          </li>
-          <li>
             <a class="link--top" title="Servicios" href="#services">
-              <span>Servicios</span>
+              <span><%= t(:services) %></span>
             </a>
           </li>
           <li>
-            <a class="link--top" title="Routes" href="#team">
-              <span>Equipo</span>
+            <a class="link--top" title="Routes" href="<%= routes_path %>">
+              <span><%= t(:routes) %></span>
             </a>
           </li>
           <li>
-            <a class="link--top" title="aboutus" href="#portfolio">
-              <span>Portfolio</span>
+            <a class="link--top" title="aboutus" href="<%= aboutus_path %>">
+              <span><%= t(:aboutus) %></span>
             </a>
           </li>
           <li>
             <a class="link--top" title="Contact" href="#contact">
               <span class="icon"><i aria-hidden="true" class="icon__contact"></i></span>
-              <span>Contacto</span>
+              <span><%= t(:contact) %></span>
             </a>
           </li>
         </ul>
@@ -97,24 +92,15 @@
       </div>
     </nav>
     <section class="main-content" role="main">
-        <div id="map" style="width:400px;height:400px;"></div>
       <%= yield %>
     </section>
       <%= link_to "aboutus", aboutus_path %>
     <footer role="contentinfo"> 
-      <small>Copyright © Héctor León Freelance Designer 2014</small>
+      <small>Copyright © Héctor León Freelance Designer 2015</small>
       <small>
         <a class="footer__link" href="#">Privacy Policy</a>
         <a class="footer__link" href="#">Terms of Use</a>
       </small>
     </footer>
-  <script>
-    var map = new GMaps({
-      el: '#map',
-      lat: -12.043333,
-      lng: -77.028333
-    });
-  </script>
-
 	</body>
 </html>

@@ -88,9 +88,35 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 }
 
 
-
+//GMap
 .container_map {
   width: 100%;
-  background-color: red;
-  padding: 15px
+  background-color: $bclight;
+}
+
+
+.googlemap {
+  width: 100%;
+  height: 70vh;
+  padding-top: 1em;
+  border-top: .2em solid $bcdark;
+  border-bottom: .5em solid $bcdark;
+}
+
+.route_title {
+  padding-top: .1em;
+  color: $white;
+}
+
+.route_title, .route_desc {
+  text-align: center;
+}
+
+
+.route_desc {
+  color: $lightergrey;
+}
+
+.map-options li {
+  background-color: yellow;
 }

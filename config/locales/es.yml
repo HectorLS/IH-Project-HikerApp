@@ -20,5 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-    goodmorning: "Buenos días"
-    index_subtitle: "La manera inteligente, un guardián de viaje contigo"
+  goodmorning: "Buenos días"
+  index_subtitle: "La manera inteligente, un guardián de viaje contigo"
+
+  routes: "Rutas"
+  services: "Servicios"
+  aboutus: "Sobre nosotros"
+  contact: "Contacto"

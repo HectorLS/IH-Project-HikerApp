@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get '/contact'   => 'site#contact'
     # EL root tiene que ser el último porque sino locale me cogerá la url del index
     # y la liará parda
+    resources :routes
     get '/', to: 'site#home', as: 'root'
   end
 
