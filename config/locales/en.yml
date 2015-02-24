@@ -24,7 +24,8 @@ en:
   goodmorning: "Good morning"
   index_subtitle: "The clever way, a voyage guardian with you"
   index_description: "pjasfj osafjsfas s"
-
+  language: "en"
+  region: "GB"
   routes: "Routes"
   services: "Services"
   aboutus: "About us"

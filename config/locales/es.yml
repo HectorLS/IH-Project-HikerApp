@@ -22,7 +22,8 @@
 es:
   goodmorning: "Buenos días"
   index_subtitle: "La manera inteligente, un guardián de viaje contigo"
-
+  language: "es"
+  region: "ES"
   routes: "Rutas"
   services: "Servicios"
   aboutus: "Sobre nosotros"
