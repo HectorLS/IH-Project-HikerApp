@@ -52,6 +52,7 @@
 
 
 var map = new ol.Map({
+
   view: new ol.View({
     center: [0, 0],
     zoom: 3
@@ -59,8 +60,23 @@ var map = new ol.Map({
   layers: [
     new ol.layer.Tile({
       source: new ol.source.MapQuest({layer: 'osm'})
-    })
+    }),
+
+    new ol.layer.Vector({
+	  	source: new ol.source.GPX({
+		    projection: ol.proj.get('EPSG:3857'),
+		    url: '/assets/fells_loop.gpx'
+	  	})
+	 	}),
+		new ol.layer.Vector({
+	  	source: new ol.source.KML({
+		    projection: ol.proj.get('EPSG:3857'),
+		    url: '/assets/fells_loop.gpx'
+	  	})
+	 	})
+
   ],
   target: 'map'
 });
+
 </script>
