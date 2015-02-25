@@ -88,12 +88,22 @@
             </a>
           </li>
         </ul>
+
+        <div class="logo_container">
+          <a class="link--top" title="Routes" href="<%= root_path %>">
+            <%= image_tag "logo_smart-hiking--light-version.svg", class: "logo" %>
+          </a>
+        </div>
+        
         <ul class="language-list">
           <li><%= link_to "ES", url_for(locale: "es") %></li>
           <li><%= link_to "EN", url_for(locale: "en") %></li>
         </ul>
+
+
       </div>
     </nav>
+
 <!-- Main -->
     <section class="main-content" role="main">
       <%= yield %>

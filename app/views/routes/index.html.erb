@@ -4,17 +4,19 @@
 	<summary class="route_desc">Ciudad de la ruta (País)</summary>
 	<div id="map" class="googlemap"></div>
 		<ul class="map-options item-4 grid">
-			<li class="xs-item-1">AAa</li>
-			<li class="xs-item-1">BB</li>
-			<li class="xs-item-1">CC</li>
-			<li class="xs-item-1">44</li>
-			<li class="xs-item-1">55</li>
-			<li class="xs-item-1">666</li>
-			<li class="xs-item-3">777777</li>
-			<li class="xs-item-3">888888</li>
-			<li class="xs-item-2">99999</li>
-			<li class="xs-item-2">110101</li>
-			<li class="xs-item-2">111111</li>
+			<li class="xs-item-1"><span class="icons icon-nature__bear__claw-01"></span></li>
+			<li class="xs-item-1"><span class="icons icon-hiking__shelter-01"></span></li>
+			<li class="xs-item-1"><span class="icons icon-hiking__ranger-01"></span></li>
+			<li class="xs-item-1"><span class="icons icon-hiking--picnic-area-01"></span></li>
+			<li class="xs-item-1"><span class="icons icon-police__badge-01"></span></li>
+			<li class="xs-item-1"><span class="icons icon-star-full"></span></li>
+
+			<li class="xs-item-1"><span class="icons icon-web__img-01"></span></li>
+			<li class="xs-item-1"><span class="icons icon-contact_info-01"></span></li>
+			<li class="xs-item-4"><span class="icons icon-hiking__compass-01">40.41415415,-23.343434</span></li>
+			<li class="xs-item-2"><span class="icons icon-hiking_distance-02">23.5 km</span></li>
+			<li class="xs-item-2"><span class="icons icon-hiking_altitude-02">3.2345 m.</span></li>
+			<li class="xs-item-1"><span class="icons icon-contact_printer-01"></span></li>
 		</ul>
 </article>
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
@@ -52,7 +54,7 @@
 var map = new ol.Map({
   view: new ol.View({
     center: [0, 0],
-    zoom: 1
+    zoom: 3
   }),
   layers: [
     new ol.layer.Tile({
