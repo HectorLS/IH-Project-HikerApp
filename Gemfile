@@ -21,6 +21,13 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'coffee-rails'
 # #geocoder (gmaps4rails depends of this)
 # gem 'geocoder'
+#Upload the files
+gem 'dragonfly'
+gem 'dragonfly-s3_data_store'
+
+group :production do
+  gem 'rack-cache', :require => 'rack/cache'
+end
 
 # geocoded_by :campodetabla
 # after_validantion :geocode
