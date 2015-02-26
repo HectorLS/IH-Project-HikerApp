@@ -5,7 +5,12 @@ class SiteController < ApplicationController
 	end
 
 	def aboutus
-		
 	end
 	
+	def contact
+	end
+
+	def services
+	end
+
 end

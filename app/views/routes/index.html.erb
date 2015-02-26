@@ -19,7 +19,6 @@
 			<li class="xs-item-1"><span class="icons icon-contact_printer-01"></span></li>
 		</ul>
 </article>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
 <script>
 	// var map = new ol.Map({
@@ -50,7 +49,7 @@
 //   });
 
 
-
+//ELEGIDO
 var map = new ol.Map({
 
   view: new ol.View({
@@ -65,18 +64,19 @@ var map = new ol.Map({
     new ol.layer.Vector({
 	  	source: new ol.source.GPX({
 		    projection: ol.proj.get('EPSG:3857'),
-		    url: '/assets/fells_loop.gpx'
+		    url: '/assets/maplayers/fells_loop.gpx'
 	  	})
 	 	}),
 		new ol.layer.Vector({
 	  	source: new ol.source.KML({
 		    projection: ol.proj.get('EPSG:3857'),
-		    url: '/assets/fells_loop.gpx'
+		    url: '/assets/maplayers/kml/map.kml'
 	  	})
 	 	})
 
   ],
   target: 'map'
 });
+
 
 </script>
