@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224111952) do
+ActiveRecord::Schema.define(version: 20150226110609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "gpx_files", force: :cascade do |t|
+    t.string   "filename"
+    t.string   "gpx_uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "gpx_name"
+  end
+
+  create_table "layers", force: :cascade do |t|
+    t.integer  "route_id"
+    t.string   "gpx_uid"
+    t.string   "gpx_name"
+    t.string   "kml_uid"
+    t.string   "kml_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rings", force: :cascade do |t|
     t.integer  "route_id"
