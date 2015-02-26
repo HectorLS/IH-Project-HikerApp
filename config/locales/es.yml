@@ -20,11 +20,37 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  goodmorning: "Buenos días"
-  index_subtitle: "La manera inteligente, un guardián de viaje contigo"
+
   language: "es"
   region: "ES"
+
+  # $Greetings
+  hello: "Hola"
+  goodmorning: "Buenos días"
+
+  # $Menu
   routes: "Rutas"
   services: "Servicios"
   aboutus: "Sobre nosotros"
   contact: "Contacto"
+
+  # $Index
+  index_subtitle: "La manera inteligente, un guardián de viaje contigo"
+  index_description: "pjasfj osafjsfas s"
+
+
+  # $Form
+  area: "Area"
+  city: "Ciudad"
+  country: "País"
+  description: "Descripción"
+  name: "Nombre"
+  route_area: "Area de la ruta"
+  route_city: "Ciudad de la ruta"
+  route_country: "País de la ruta"
+  route_description: "Descripción de la ruta"
+  route_name: "Nombre de la ruta"
+
+
+  # $Common Words
+  next: "Siguiente"

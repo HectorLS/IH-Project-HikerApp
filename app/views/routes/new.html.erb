@@ -2,35 +2,28 @@
 	<fieldset>
 		<legend>Create the route</legend>
 		<div class="form_field">
-			<%= f.label :name %>
-			<%= f.text_field :name, placeholder: "Route name" %>
+			<%= f.label t(:name) %>
+			<%= f.text_field :name, placeholder: t(:route_name) %>
 		</div>
 		<div class="form_field">
-			<%= f.label :area %>
-			<%= f.text_field :area, placeholder: "Area where is the route" %>
+			<%= f.label t(:area) %>
+			<%= f.text_field :area, placeholder: t(:route_area) %>
 		</div>
 		<div class="form_field">
-			<%= f.label :city %>
-			<%= f.text_field :city, placeholder: "City of the route" %>
+			<%= f.label t(:city) %>
+			<%= f.text_field :city, placeholder: t(:route_city) %>
 		</div>
 		<div class="form_field">
-			<%= f.label :country %>
-			<%= f.text_field :country, placeholder: "Country of the route" %>
+			<%= f.label t(:country) %>
+			<%= f.text_field :country, placeholder: t(:route_country) %>
 		</div>
 		<div class="form_field">
-			<%= f.label :description %>
-			<%= f.text_area :description, placeholder: "Route description" %>
+			<%= f.label t(:description) %>
+			<%= f.text_area :description, placeholder: t(:route_description) %>
 		</div>
+
 		<div class="form_field">
-			<%= f.label :size %>
-			<%= f.number_field :size, placeholder: "Route size (km)" %>
-		</div>
-		<div class="form_field">
-			<%= f.label "Inicial Latitude" %>
-			<%= f.number_field :initial_latitude, :step => "0.0000001" %>
-		</div>
-		<div class="form_field">
-		<%= f.submit 'Publish Route' %>
+		<%= f.submit t(:next) %>
 		</div>
 	</fieldset>
 <% end %>

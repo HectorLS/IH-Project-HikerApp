@@ -20,13 +20,35 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello"
-  goodmorning: "Good morning"
-  index_subtitle: "The clever way, a voyage guardian with you"
-  index_description: "pjasfj osafjsfas s"
+
   language: "en"
   region: "GB"
+
+  # $Greetings
+  hello: "Hello"
+  goodmorning: "Good morning"
+
+  # $Menu
   routes: "Routes"
   services: "Services"
   aboutus: "About us"
   contact: "Contact"
+
+  # $Index
+  index_subtitle: "The clever way, a voyage guardian with you"
+  index_description: "pjasfj osafjsfas s"
+
+  # $Form
+  area: "Area"
+  city: "City"
+  country: "País"
+  description: "Description"
+  name: "Name"
+  route_area: "Route area"
+  route_city: "Route city"
+  route_country: "Route country"
+  route_description: "Route description"
+  route_name: "Route name"
+
+  # $Common Words
+  next: "Next"
