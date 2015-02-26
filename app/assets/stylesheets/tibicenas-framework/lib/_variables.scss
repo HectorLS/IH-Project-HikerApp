@@ -35,7 +35,13 @@ $breakpoints: (
 ) !default;
 
 
+$brand: (
+  firstcolor: rgb(243,148,36),
+  secondcolor: rgb(5,169,122),
+  textcolor: rgb(93,93,93)
+  ) !default;
 
+// map-get($brand, firstcolor);
 /*------------------------------------*\
     $grid
 \*------------------------------------*/

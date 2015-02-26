@@ -55,6 +55,16 @@ es:
   route_name: "Nombre de la ruta"
 
 
+# $routes
+  routes_list: "Listado de rutas"
+  routes_search: "Busca una ruta para ti"
+  routes_search_description_p1: "Hola Smart Hiker!, aqu´i podrás encontrar una ruta para ti"
+  routes_search_description_p2: "Puedes realizar la busqueda por el nombre de ruta, o simplemente buscar rutas en tu ciudad o país."
+  here_we_go: "Allá vamos!"
+  see_the_map: "Mira la ruta en el mapa"
+
+
+
   # $Common Words
   next: "Siguiente"
   save: "Guardar"

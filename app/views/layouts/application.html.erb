@@ -67,23 +67,22 @@
 
         <ul id="js-menu--toggle" class="nav--top_list">
           <li>
-            <a class="link--top" title="Servicios" href="#services">
+            <a class="link--top" title="<%= t(:services) %>" href="#services">
               <span><%= t(:services) %></span>
             </a>
           </li>
           <li>
-            <a class="link--top" title="Routes" href="<%= routes_path %>">
+            <a class="link--top" title="<%= t(:routes) %>" href="<%= routes_path %>">
               <span><%= t(:routes) %></span>
             </a>
           </li>
           <li>
-            <a class="link--top" title="aboutus" href="<%= aboutus_path %>">
+            <a class="link--top" title="<%= t(:aboutus) %>" href="<%= aboutus_path %>">
               <span><%= t(:aboutus) %></span>
             </a>
           </li>
           <li>
-            <a class="link--top" title="Contact" href="#contact">
-              <span class="icon"><i aria-hidden="true" class="icon__contact"></i></span>
+            <a class="link--top" title="<%= t(:contact) %>" href="#contact">
               <span><%= t(:contact) %></span>
             </a>
           </li>
@@ -108,7 +107,8 @@
     <section class="main-content" role="main">
       <%= yield %>
     </section>
-      <%= link_to "aboutus", aboutus_path %>
+
+<!-- Footer -->
     <footer role="contentinfo"> 
       <small>Copyright © Héctor León Freelance Designer 2015</small>
       <small>

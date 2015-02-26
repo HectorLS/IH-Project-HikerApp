@@ -1,11 +1,19 @@
 
-<h2>All the routes</h2>
+<section class="section--routes-list">
+  <h2 class="heading--routes"><%= t(:routes_list) %></h2>
 
-<% @routes.each do |route| %>
-  <article class="route">
-    <h3 class="title"><%= link_to(route.name, route_path(route.id)) %></h3>
-    <p class="description"><%= route.description %></p>
-    <p class="location"><%= route.city %>(<%= route.country %>)</p>
-  </article>
+  <% @routes.each do |route| %>
+    <article class="route">
+      <div class="img-container">
+        <a title="<%= t(:see_the_map) %>" href="<%= route_path(route.id) %>">
+          <span class="icon-contact_location-04"></span>
+        </a>
+      </div>
 
-<% end %>
+      <h3 class="title"><%= link_to(route.name, route_path(route.id)) %></h3>
+      <p class="description"><%= route.description %></p>
+      <p class="location"><span><%= route.city %></span> (<%= route.country %>)</p>
+    </article>
+  <% end %>
+</section>
+

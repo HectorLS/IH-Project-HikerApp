@@ -53,10 +53,18 @@ en:
   route_country: "Route country"
   route_description: "Route description"
   route_name: "Route name"
-
-
   # -- Flash Messages
   layer_saved_success: "Layer saved correctly!"
+
+
+# $routes
+  routes_list: "Routes list"
+  routes_search: "Search a route for you"
+  routes_search_description_p1: "Hello Smart Hiker!, here you could find a route for you."
+  routes_search_description_p2: "You can search using the name of the route, or simply check the routes in your city or country."
+  here_we_go: "Here we go!"
+  see_the_map: "See the route on the map"
+
 
 # $Common Words
   next: "Next"
