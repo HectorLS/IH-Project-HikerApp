@@ -45,6 +45,9 @@ es:
   country: "País"
   description: "Descripción"
   name: "Nombre"
+  gpx: "Selecciona el archivo .gpx para esta ruta"
+  kml: "Selecciona el archivo .kml para esta ruta"
+  layer_saved_success: "Capa guardada correctamente!"
   route_area: "Area de la ruta"
   route_city: "Ciudad de la ruta"
   route_country: "País de la ruta"
@@ -54,3 +57,4 @@ es:
 
   # $Common Words
   next: "Siguiente"
+  save: "Guardar"

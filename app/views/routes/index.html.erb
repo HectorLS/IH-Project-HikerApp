@@ -1,82 +1,11 @@
 
-<article class="container_map">
-	<h4 class="route_title">Nombre de la ruta seleccionada</h4>
-	<summary class="route_desc">Ciudad de la ruta (País)</summary>
-	<div id="map" class="googlemap"></div>
-		<ul class="map-options item-4 grid">
-			<li class="xs-item-1"><span class="icons icon-nature__bear__claw-01"></span></li>
-			<li class="xs-item-1"><span class="icons icon-hiking__shelter-01"></span></li>
-			<li class="xs-item-1"><span class="icons icon-hiking__ranger-01"></span></li>
-			<li class="xs-item-1"><span class="icons icon-hiking--picnic-area-01"></span></li>
-			<li class="xs-item-1"><span class="icons icon-police__badge-01"></span></li>
-			<li class="xs-item-1"><span class="icons icon-star-full"></span></li>
+<h2>All the routes</h2>
 
-			<li class="xs-item-1"><span class="icons icon-web__img-01"></span></li>
-			<li class="xs-item-1"><span class="icons icon-contact_info-01"></span></li>
-			<li class="xs-item-4"><span class="icons icon-hiking__compass-01">40.41415415,-23.343434</span></li>
-			<li class="xs-item-2"><span class="icons icon-hiking_distance-02">23.5 km</span></li>
-			<li class="xs-item-2"><span class="icons icon-hiking_altitude-02">3.2345 m.</span></li>
-			<li class="xs-item-1"><span class="icons icon-contact_printer-01"></span></li>
-		</ul>
-</article>
+<% @routes.each do |route| %>
+  <article class="route">
+    <h3 class="title"><%= link_to(route.name, route_path(route.id)) %></h3>
+    <p class="description"><%= route.description %></p>
+    <p class="location"><%= route.city %>(<%= route.country %>)</p>
+  </article>
 
-<script>
-	// var map = new ol.Map({
- //    target: 'map',  // Con esto llamo a mi ID 
- //    layers: [				
- //    // Aquí definimos las layers de nuestro mapa 
- //    //(Tile es el mapa en sí, que se carga en "baldosas"(tiles))
- //      new ol.layer.Tile({
- //        source: new ol.source.MapQuest({layer: 'sat'})
- //      })
- //    ],
- //    view: new ol.View({
- //      center: ol.proj.transform([37.41, 8.82], 'EPSG:4326', 'EPSG:3857'),
- //      zoom: 4
- //    })
- //  });
-
-
-// new ol.Map({
-//     layers: [
-//       new ol.layer.Tile({source: new ol.source.OSM()})
-//     ],
-//     view: new ol.View({
-//       center: [0, 0],
-//       zoom: 2
-//     }),
-//     target: 'map'
-//   });
-
-
-//ELEGIDO
-var map = new ol.Map({
-
-  view: new ol.View({
-    center: [0, 0],
-    zoom: 3
-  }),
-  layers: [
-    new ol.layer.Tile({
-      source: new ol.source.MapQuest({layer: 'osm'})
-    }),
-
-    new ol.layer.Vector({
-	  	source: new ol.source.GPX({
-		    projection: ol.proj.get('EPSG:3857'),
-		    url: '/assets/gpx/fells_loop.gpx'
-	  	})
-	 	}),
-		new ol.layer.Vector({
-	  	source: new ol.source.KML({
-		    projection: ol.proj.get('EPSG:3857'),
-		    url: '/assets/kml/map.kml'
-	  	})
-	 	})
-
-  ],
-  target: 'map'
-});
-
-
-</script>
+<% end %>

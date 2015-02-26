@@ -6,8 +6,7 @@ Rails.application.routes.draw do
     # EL root tiene que ser el último porque sino locale me cogerá la url del index
     # y la liará parda
     resources :routes do
-    	resources :gpx_files
-    	resources :kml_files
+        resources :layers
     end
     resources :trails
     get '/', to: 'site#home', as: 'root'

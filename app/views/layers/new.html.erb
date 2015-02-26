@@ -1,0 +1,27 @@
+<section class="form--layer">
+
+	<%= form_for [@route,@layer] do |f| %>
+		<fieldset>
+			<legend>Add the layers to your route</legend>
+
+			<div class="form_field">
+				<%= f.label t(:gpx) %>
+				<%= f.file_field :gpx, required: true %>
+				<!-- Retiene el visor si el archivo es incorrecto, para que no cargue de nuevo la URL -->
+				<!-- Y simplemente tenga que elegir un archivo válido -->
+				<%= f.hidden_field :retained_gpx %>  
+			</div>
+
+			<div class="form_field">
+				<%= f.label t(:kml) %>
+				<%= f.file_field :kml, required: true %>
+				<%= f.hidden_field :retained_kml %>
+			</div>
+
+			<div class="form_field">
+				<%= f.submit t(:save) %>
+			</div>
+
+		</fieldset>
+	<% end %>
+</section>
