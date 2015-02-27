@@ -61,6 +61,18 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 	background-color: cyan;
 }
 
+.section--intro {
+  background-image: image-url("bg-02.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+
+  width: 100%;
+  height: 400px;
+}
+
+
 .main-content {
 	margin-top: 3em;
 }
@@ -87,14 +99,14 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
   margin-right: .4em;
 }
 
-.logo_container {
+.logo_container--nav {
   display: inline-block;
   position: fixed;
   top: .5%;
-  left: 35%;
+  left: 40%;
 }
 
-.logo {
+.logo--nav {
   height: 2.3em;
 }
 
@@ -170,6 +182,93 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
   color:#eee;
   text-align:center;
   padding:2.4px 4px 1.6px 4px;
+
+  &:hover {
+    background-color: rgba(0, 60, 136,.8);
+  }
+}
+
+
+.btn--canvas {
+  position: absolute;
+  z-index: 20;
+  top: .45em;
+  right: 1.6em;
+  width: 20px;
+  height: 20px;
+  border: 3.5px solid rgba(255,255,255,.8);
+  background-color: rgb(0, 60, 136);
+  border-radius: 50%;
+}
+
+
+.btn--geolocate, 
+.btn--canvas {
+  cursor: pointer;
+}
+
+.btn--canvas {
+  &:active {
+    background-color: map-get($brand, secondcolor);
+  }
+}
+
+.canvas-list {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  top: .45em;
+  right: .94em;
+  transition: 300ms;
+}
+
+
+.js-canvas-list {
+  z-index: 12;
+  opacity: 1;
+
+  li.active:nth-child(1) {
+    margin-top: 2em;
+    transition: 300ms;
+  }
+
+  li.active:nth-child(2) {
+    margin-top: .6em;
+  }
+
+  li.active:nth-child(3) {
+    margin-top: .6em;
+  }
+}
+
+
+
+
+//Texto para los inputs
+// .canvas_labels span::before {
+//   content: "Yekale";
+//   margin-left: -55px;
+//   text-align: right;
+//   color: rgb(0, 60, 136);
+// }
+
+.canvas-list input[type="radio"] {
+  display: none;
+}
+
+label input + .input--canvas {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  background: #33CCCC;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px map-get($brand, secondcolor);
+}
+
+label input:checked + .input--canvas {
+  background: #FF9640;
+  box-shadow: 0 0 0 2px map-get($brand, firstcolor);
 }
 
 
@@ -226,6 +325,10 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
     color: map-get($brand, textcolor);
   }
 }
+
+
+
+
 
 
 .img-container {

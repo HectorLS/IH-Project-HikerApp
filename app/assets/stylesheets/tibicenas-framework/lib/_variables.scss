@@ -290,3 +290,17 @@ $nav-color:               $secondary;
 $nav-background:          $darkergrey;
 $nav-borders:             lighten($nav-background, 10%);
 $nav-lists-background:    $basecolor;
+
+
+
+
+
+
+// Input options
+
+
+$option-color: #cbd1d8;
+$checked-option-color: map-get($brand, firstcolor);
+$option-size: 40px;
+$explosion-distance: 2; // Multiplied by $option-size
+$explosion-duration: 0.65s;
