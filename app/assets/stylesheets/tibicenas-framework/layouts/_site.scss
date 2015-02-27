@@ -112,6 +112,7 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
   height: 70vh;
   border-top: .2em solid $bcdark;
   border-bottom: .5em solid $bcdark;
+  position: relative;
 }
 
 
@@ -152,6 +153,34 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 .icon-hiking_altitude-02::before {
   color: orange;
 }
+
+
+    // MAP BUTTONS
+
+.btn--geolocate {
+  position: absolute;
+  z-index: 20;
+  bottom: .45em;
+  right: 2.6em;
+  font-size: 1.1em;
+  font-weight: bolder;
+  background-color: rgba(0, 60, 136,.49);
+  border: 3.5px solid rgba(255,255,255,.8);
+  border-radius: 1em;
+  color:#eee;
+  text-align:center;
+  padding:2.4px 4px 1.6px 4px;
+}
+
+
+
+
+
+
+
+
+
+
 
 // $Routes
 // =========================================
@@ -202,3 +231,4 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 .img-container {
   display: inline-block;
 }
+
