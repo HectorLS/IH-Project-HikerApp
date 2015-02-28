@@ -1,0 +1,199 @@
+$alert    : rgb(252,228,207);       //Tonalidad Naranja Claro
+$alert--lighter    : lighten($alert, 20%);
+$alert--light      : lighten($alert, 10%);
+$alert--dark       : darken($alert, 10%);
+$alert--darker     : darken($alert, 20%);
+
+
+$error    : rgb(218,79,73);         //Tonalidad Roja
+$error--lighter    : lighten($error, 20%);
+$error--light      : lighten($error, 10%);
+$error--dark       : darken($error, 10%);
+$error--darker     : darken($error, 20%);
+
+$info     : rgb(165,221,223);       //Tonalidad Blanca
+$info--lighter    : lighten($info, 20%);
+$info--light      : lighten($info, 10%);
+$info--dark       : darken($info, 10%);
+$info--darker     : darken($info, 20%);
+
+
+$success  : rgb(91,183,91);         //Tonalidad Verde
+$success--lighter    : lighten($success, 20%);
+$success--light      : lighten($success, 10%);
+$success--dark       : darken($success, 10%);
+$success--darker     : darken($success, 20%);
+
+
+
+
+$warning  : rgb(250,167,50);        //Tonalidad Naranja
+$warning--lighter    : lighten($warning, 20%);
+$warning--light      : lighten($warning, 10%);
+$warning--dark       : darken($warning, 10%);
+$warning--darker     : darken($warning, 20%);
+
+
+.buttons--group {
+  margin: 0 1%;
+  button:first-of-type {
+    border-radius: 7px 0 0 7px;
+  }
+
+  button:last-of-type {
+    border-radius: 0 7px 7px 0;
+  }
+
+}
+
+.btn--machine {
+  background-image: linear-gradient($bclighter, $basecolor);
+  text-align: center;
+  padding: .4em .2em;
+  border: 0;
+  border-bottom: 5px solid $bcdark;
+  box-shadow: inset 0 -1px  0px     rgba(63, 59, 113, 0.2), 
+                    0  9px 16px 0   rgba(0, 0, 0, 0.3),           //Sombra inferior 2
+                    0  4px  3px 0   rgba(0, 0, 0, 0.3),             //Sombra inferior
+                    1px 0   1px 1px #150a1e;                      // Shadow in the borders
+
+  text-shadow:  0 0 21px rgba(0, 0, 0, 0.3),        // Sombra exterior
+                0 -1px 0  $bcdarker;                    //Sombra interior
+  span::before {
+    color: $bcdark;
+    font-weight: bolder;
+  }
+}
+
+.btn--machine:last-child {
+   box-shadow: inset 0 -1px 0px rgba(63, 59, 113, 0.2), 
+                      0 9px 16px 0 rgba(0, 0, 0, 0.3),            //Sombra inferior 2
+                      0 4px 3px 0 rgba(0, 0, 0, 0.3)            //Sombra inferior   
+}
+
+
+.btn--machine.pushed, 
+.btn--machine:hover {
+  border-bottom: 2px solid $bcdark;
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1),
+              0 0 0 1px #170c22, 
+              0 2px 1px 0 rgba(121, 65, 135, 0.5), 
+              inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
+
+  background-image: linear-gradient($bcdark, $bclighter);
+
+
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+  
+  span::before {
+  color: #e4e3ce;
+  }
+}
+
+
+
+// Tipos de botones
+.btn--machine.c_error {
+  background-image: linear-gradient($error--light, $error--dark);
+  border-bottom: 5px solid $error--darker;
+  text-shadow:  0 0 21px rgba(0, 0, 0, 0.3),        // Sombra exterior
+                0 -1px 0 $grey;                    //Sombra interior
+  
+  span::before {
+    color: $error--darker;
+  }
+}
+
+.btn--machine.c_error.pushed, .btn--machine.c_error:hover {
+  border-bottom: 2px solid $error--darker;
+  background-image: linear-gradient($error--dark, $error);
+  span::before {
+  color: #e4e3ce;
+  }
+}
+
+
+
+.btn--machine.c_success {
+  background-image: linear-gradient($success--light, $success--dark);
+  border-bottom: 5px solid $success--darker;
+  text-shadow:  0 0 21px rgba(0, 0, 0, 0.3),        // Sombra exterior
+                0 -1px 0 $grey;                    //Sombra interior
+  
+  span::before {
+    color: $success--darker;
+    font-weight: bolder;
+  }
+}
+
+.btn--machine.c_success.pushed, .btn--machine.c_success:hover {
+  border-bottom: 2px solid $success--darker;
+  background-image: linear-gradient($success--dark, $success);
+  span::before {
+  color: #e4e3ce;
+  }
+}
+
+
+.btn--machine.c_alert {
+  background-image: linear-gradient($alert--light, $alert--dark);
+  border-bottom: 5px solid $alert--darker;
+  text-shadow:  0 0 21px rgba(0, 0, 0, 0.3),        // Sombra exterior
+                0 -1px 0 $grey;                    //Sombra interior
+  
+  span::before {
+    color: $alert--darker;
+    font-weight: bolder;
+  }
+}
+
+.btn--machine.c_alert.pushed, .btn--machine.c_alert:hover {
+  border-bottom: 2px solid $alert--darker;
+  background-image: linear-gradient($alert--dark, $alert);
+  span::before {
+  color: #e4e3ce;
+  }
+}
+
+
+.btn--machine.c_warning {
+  background-image: linear-gradient($warning--light, $warning--dark);
+  border-bottom: 5px solid $warning--darker;
+  text-shadow:  0 0 21px rgba(0, 0, 0, 0.3),        // Sombra exterior
+                0 -1px 0 $grey;                    //Sombra interior
+  
+  span::before {
+    color: $warning--darker;
+    font-weight: bolder;
+  }
+}
+
+.btn--machine.c_warning.pushed, .btn--machine.c_warning:hover {
+  border-bottom: 2px solid $warning--darker;
+  background-image: linear-gradient($warning--dark, $warning);
+  span::before {
+  color: #e4e3ce;
+  }
+}
+
+.btn--machine.c_info {
+  background-image: linear-gradient($info--light, $info--dark);
+  border-bottom: 5px solid $info--darker;
+  text-shadow:  0 0 21px rgba(0, 0, 0, 0.3),        // Sombra exterior
+                0 -1px 0 $grey;                   //Sombra interior
+  
+  span::before {
+    color: $info--darker;
+    font-weight: bolder;
+  }
+}
+
+.btn--machine.c_info.pushed, .btn--machine.c_info:hover {
+  border-bottom: 2px solid $info--darker;
+  background-image: linear-gradient($info--dark, $info);
+  span::before {
+  color: #e4e3ce;
+  }
+}
+
+
