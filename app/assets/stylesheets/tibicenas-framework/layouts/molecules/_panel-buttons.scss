@@ -36,13 +36,13 @@ $warning--darker     : darken($warning, 20%);
 
 .buttons--group {
   margin: 0 1%;
-  button:first-of-type {
-    border-radius: 7px 0 0 7px;
-  }
+  // button:first-of-type {
+  //   border-radius: 7px 0 0 7px;
+  // }
 
-  button:last-of-type {
-    border-radius: 0 7px 7px 0;
-  }
+  // button:last-of-type {
+  //   border-radius: 0 7px 7px 0;
+  // }
 
 }
 
