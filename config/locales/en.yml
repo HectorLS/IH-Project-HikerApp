@@ -36,7 +36,24 @@ en:
 
 # $Index
   index_subtitle: "The clever way, a voyage guardian with you"
-  index_description: "pjasfj osafjsfas s"
+  index_description: "Smart-Hiking is a place for create and discover hiking routes around the planet"
+  index_summary: "You can share your routes with others and even complete it with new interesting waypoints and secondary trails"
+  index_live_the_moment_1: "We take care of you"
+  index_live_the_moment_2: "but you see to live the moment"
+  index_info_points: "As a hikers, the security is important in every travel, that's the reason of why we're collecting all the secure points in the planet"
+  index_info_points_2: "It's gonna be an arduous task, but together we can do it"
+  show_routes: "Show your route now, just click the below button"
+  follow_us: "Follow us to keep updated"
+
+# $MapView
+  panel_buttons_explanation: "Use the panel buttons below to activate or desactivate the markers that you want to see"
+  map_explanation: "Even You can switch between three map types for a better visualization"
+
+# $Contact
+  contact_text: "Please don't doubt in contact with us if you've some quest, but first check the F.A.Q. section, probably your quest is already answered"
+
+# $Services
+  gpx_explanation: "Upload your .GPX file last weekend with one click, edit some waypoints and add usefull description and share!"
 
 # $Form
   # -- Fields
@@ -56,16 +73,21 @@ en:
   # -- Flash Messages
   layer_saved_success: "Layer saved correctly!"
 
-
-# $routes
+# $Routes
   routes_list: "Routes list"
   routes_search: "Search a route for you"
   routes_search_description_p1: "Hello Smart Hiker!, here you could find a route for you."
   routes_search_description_p2: "You can search using the name of the route, or simply check the routes in your city or country."
   here_we_go: "Here we go!"
   see_the_map: "See the route on the map"
-
+  most_recently: "Most recently routes"
 
 # $Common Words
   next: "Next"
   save: "Save"
+
+# $Footer
+  policy: "Privacy policy"
+  terms_of_use: "Terms of use"
+  faq: "F.A.Q."
+  author: "Author"

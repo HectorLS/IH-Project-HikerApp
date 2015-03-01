@@ -107,13 +107,41 @@
     <section class="main-content" role="main">
       <%= yield %>
     </section>
+<!-- Social -->
+    <section class="social-area">
+      <h3 class="social-area_title"><%= t(:follow_us) %></h3>
+      <ul class="social_list a--right">
+        <li>
+          <a class="icon-social_facebook social-link--facebook" href="#">    
+            <span class="social_text spawn-from-left">Facebook</span>
+          </a> 
+        </li>
 
+        <li>
+          <a class="icon-social_twitter social-link--twitter" href="#">
+            <span class="spawn-from-left">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon-social_pinterest social-link--pinterest" href="#">
+            <span class="spawn-from-left">Pinterest</span>
+          </a>
+        </li>
+
+
+        <li>
+        <a class="icon-social_gplus social-link--googleplus" href="#">
+        <span class="spawn-from-left">Google Plus</span>
+        </a> 
+        </li>  
+      </ul>
+    </section>
 <!-- Footer -->
     <footer role="contentinfo"> 
       <small>Copyright © Héctor León Freelance Designer 2015</small>
       <small>
-        <a class="footer__link" href="#">Privacy Policy</a>
-        <a class="footer__link" href="#">Terms of Use</a>
+        <a class="footer__link" href="#"><%= t(:policy) %></a>
+        <a class="footer__link" href="#"><%= t(:terms_of_use) %></a>
       </small>
     </footer>
 	</body>

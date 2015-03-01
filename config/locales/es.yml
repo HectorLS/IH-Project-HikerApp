@@ -24,22 +24,39 @@ es:
   language: "es"
   region: "ES"
 
-  # $Greetings
+# $Greetings
   hello: "Hola"
   goodmorning: "Buenos días"
 
-  # $Menu
+# $Menu
   routes: "Rutas"
   services: "Servicios"
   aboutus: "Sobre nosotros"
   contact: "Contacto"
 
-  # $Index
+# $Index
   index_subtitle: "La manera inteligente, un guardián de viaje contigo"
-  index_description: "pjasfj osafjsfas s"
+  index_description: "Smart-Hiking es un sitio para crear y descubrir rutas de senderismo alrededor del planeta"
+  index_summary: "Podrás compartir tus rutas con otros e incluso completarlas con nuevos e interesantes waypoints y senderos alternativos."
+  index_live_the_moment_1: "Nosotros velamos por ti"
+  index_live_the_moment_2: "pero tú encárgate de vivir el momento"
+  index_info_points: "Como senderistas, la seguridad es importante en cada viaje, esa es la razón por cual estamos recogiendo todos los puntos seguros en el planeta."
+  index_info_points_2: "Va a ser una tarea ardua, pero juntos podemos hacerlo."
+  show_routes: "Muestra tu ruta, para ello simplemente haz click en el botón de abajo."
+  follow_us: "Síganos para seguir actualizado"
 
+# $MapView
+  panel_buttons_explanation: "Usa el panel de botones inferior para activar o desactivar los marcadores que quieras ver."
+  map_explanation: "Incluso puedes cambiar entre tres tipos de mapa para una mejor visualización."
 
-  # $Form
+# $Contact
+  contact_text: "Por favor, no dude en ponerse en contacto con nosotros  si tiene alguna duda, pero primero mire la sección de F.A.Q., probablemente su duda ya haya sido resuelta."
+
+# $Services
+  gpx_explanation: "Sube tu archivo .GPX del fin de semana pasado, edita algunos waypoints, añade descripciónes útiles ¡y comparte!"
+
+# $Form
+  # -- Fields
   area: "Area"
   city: "Ciudad"
   country: "País"
@@ -47,13 +64,14 @@ es:
   name: "Nombre"
   gpx: "Selecciona el archivo .gpx para esta ruta"
   kml: "Selecciona el archivo .kml para esta ruta"
-  layer_saved_success: "Capa guardada correctamente!"
+  # -- Placeholder
   route_area: "Area de la ruta"
   route_city: "Ciudad de la ruta"
   route_country: "País de la ruta"
   route_description: "Descripción de la ruta"
   route_name: "Nombre de la ruta"
-
+  # -- Flash Messages
+  layer_saved_success: "Capa guardada correctamente!"
 
 # $routes
   routes_list: "Listado de rutas"
@@ -62,9 +80,14 @@ es:
   routes_search_description_p2: "Puedes realizar la busqueda por el nombre de ruta, o simplemente buscar rutas en tu ciudad o país."
   here_we_go: "Allá vamos!"
   see_the_map: "Mira la ruta en el mapa"
-
-
+  most_recently: "Las rutas más recientes"
 
   # $Common Words
   next: "Siguiente"
   save: "Guardar"
+
+# $Footer
+  policy: "Política de privacidad"
+  terms_of_use: "Términos de uso"
+
+  author: "Autor"

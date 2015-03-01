@@ -81,7 +81,7 @@ $warning--darker     : darken($warning, 20%);
               inset 0 0 4px 3px rgba(15, 8, 22, 0.2);
 
   background-image: linear-gradient($bcdark, $bclighter);
-
+  margin-top: .2em;
 
   text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
   
