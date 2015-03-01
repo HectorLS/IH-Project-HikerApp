@@ -1,0 +1,17 @@
+<h3><%= t(:most_recently) %></h3>
+
+<table class="table">
+	<% @last_routes.each do |recent_route| %>
+		<thead>
+			<tr>
+				<th><%= link_to(recent_route.name, route_path(recent_route.id))%></th>
+			</tr>
+		</thead>
+		<tbody>
+			<td><%= recent_route.city %></td>
+			<td><%= recent_route.country %></td>
+		</tbody>
+
+	<% end %>
+</table>
+

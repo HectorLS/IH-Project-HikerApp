@@ -54,3 +54,21 @@ nav[role=navigation] {
 	text-decoration: none;
 }
 
+@include media-query-bp($bp4) {
+
+ .nav--top_list {
+ 	position: fixed;
+ 	display: inline-block;
+ 	margin: 0 auto;
+ 	left: 20%;
+ 	top: 0;
+ 	}
+
+ .nav--top_list li {
+ 		height: 2.7em;
+		display: inline-block;
+		padding: 1% 2%;
+		border: 0;
+ }
+
+}

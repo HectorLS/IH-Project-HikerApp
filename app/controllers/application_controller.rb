@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead. 
   protect_from_forgery with: :exception
 
-	before_action :set_locale
+  before_action :set_locale
+  before_action :set_last_routes
 	 
 	def set_locale
 	  if cookies[:locale].nil? && params[:locale].nil?
@@ -21,4 +22,11 @@ class ApplicationController < ActionController::Base
   def extract_locale_from_accept_language_header
     request.env['HTTP_ACCEPT_LANGUAGE'].try(:scan, /^[a-z]{2}/).try(:first)
   end
+
+
+  def set_last_routes
+    @last_routes = Route.all
+  end
+
+
 end

@@ -85,6 +85,10 @@
     right: 0;
   }
 
+  .social-area_title {
+    display: none;
+  }
+
   .social_list [class*="social-link--"] {
     transition: background .5s ease .300ms;
     // font: normal normal normal 16px/20px;

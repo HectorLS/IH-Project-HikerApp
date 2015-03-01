@@ -133,6 +133,15 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
   left: 40%;
 }
 
+
+
+@include media-query-bp($bp4) {
+   .logo_container--nav {
+    left: 2%;
+   }
+}
+
+
 .logo--nav {
   height: 2.3em;
 }
@@ -414,9 +423,4 @@ label input:checked + .input--canvas {
 
 
 
-@include media-query-bp($bp3) {
-  // .grid {
-  //   margin-left: 4em;
-  //   margin-right: 4em;
-  // }
-}
+

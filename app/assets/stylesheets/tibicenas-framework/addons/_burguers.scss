@@ -56,3 +56,9 @@
 // .btn--burguer.active > div {
 //   transform: rotate(360deg);
 // }
+@include media-query-bp($bp4) {
+  .btn--burguer {
+    display: none;
+  }
+
+}
