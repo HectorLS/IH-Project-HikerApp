@@ -57,10 +57,6 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 @import "organisms/footer.scss";
 
 
-.section--feature {
-	background-color: cyan;
-}
-
 .section--intro {
   background-image: image-url("bg-03.jpg");
   background-attachment: fixed;
@@ -93,12 +89,44 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 
 .section--summary {
   background-color: map-get($brand, secondcolor);
-  // background-color: red;
-  // background-color: rgba(255,255,255, .7);
+}
 
+.section--contact {
+    background-image: image-url("bg-04.jpg");
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 400px;
 }
 
 
+.section--feature {
+  margin: 0;
+  background-image: image-url("bg-08.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 200px;
+
+  article {
+    background-color: rgba(0,0,0, .4);
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  h2 {
+    font-size: 90px;
+    margin: 0;
+  }
+
+  h2,
+  p {
+    text-align: center;
+    color: $white;
+  }
+}
 
 .main-content {
 	margin-top: 3em;
@@ -134,6 +162,14 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 }
 
 
+@include media-query-bp($bp2) {
+  .section--feature {
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+  }
+}
+
+
 
 @include media-query-bp($bp4) {
    .logo_container--nav {
@@ -149,6 +185,10 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 
 aside[role=complementary] {
   background-color: map-get($brand, firstcolor);
+
+  h3 {
+    text-align: center;
+  }
 }
 
 .grid.anuncio {
@@ -163,7 +203,6 @@ aside[role=complementary] {
     text-align: right;
   }
 }
-
 
 //GMap
 // =========================================
@@ -205,7 +244,7 @@ aside[role=complementary] {
 
 .map-options li {
   background-image: linear-gradient(rgb(172,215,133),rgb(157,237,86));
-  text-align: center;
+  text-align: right;
   border: 1px solid $bcdark;
   box-shadow: inset 9px -10px 11px -5px rgba(0,31,0,.35);
   padding: .3em;
@@ -214,6 +253,32 @@ aside[role=complementary] {
     color: rgb(71,94,50);
     padding: .6em 0;
     display: inline-block;
+  }
+}
+
+
+@include media-query-bp($bp2) {
+   .map-options li {
+    text-align: center;
+   }
+}
+
+
+
+@include media-query-bp($bp3) {
+  .map-options,
+  .map-panel.buttons--group {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
+  }
+}
+
+@include media-query-bp($bp4) {
+  .map-options,
+  .map-panel.buttons--group {
+    padding-left: 35%;
+    padding-right: 35%;
   }
 }
 
@@ -278,7 +343,7 @@ aside[role=complementary] {
   position: absolute;
   z-index: 20;
   top: .45em;
-  right: 1.6em;
+  right: 1em;
   width: 20px;
   height: 20px;
   border: 3.5px solid rgba(255,255,255,.8);
@@ -345,7 +410,7 @@ label input + .input--canvas {
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin-right: 10px;
+  margin-right: 2px;
   background: #33CCCC;
   border-radius: 50%;
   box-shadow: 0 0 0 2px map-get($brand, secondcolor);

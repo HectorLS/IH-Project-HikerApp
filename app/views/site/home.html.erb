@@ -8,7 +8,8 @@
 </header>
 <!-- Services  -->
 <div class="grid">
-  <section class="item-4  section  section--summary" role="region">
+
+  <section class="item-3  section  section--summary" role="region">
     <div class="wrapper">
       <h4><%= t(:index_description) %></h4>
       <article class="summary" role="article">
@@ -17,9 +18,10 @@
       </article>
     </div>
   </section>
-  <aside class= "item-2" role="complementary">
-    <h4><%= render 'shared/sidebar' %></h4>
+  <aside class= "item-3" role="complementary">
+    <%= render 'shared/sidebar' %>
   </aside>
+
   <section class="item-6 section section--intro">
     <div class="intro_title_container">
       <h4><%= t(:index_live_the_moment_1) %></h4>
@@ -28,9 +30,25 @@
   </section>
 
   <section class="item-6 grid section section--feature">
-    <article class="xs-item-2">5</article>
-    <article class="xs-item-2">44</article>
-    <article class="xs-item-2">44</article>
+
+    <article class="item-2">
+      <h2><span class="icon-contact_location-04"></span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+    </article>
+
+    <article class="item-2">
+      <h2><span class="icon-earth"></span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+    </article>
+
+    <article class="item-2">
+      <h2><span class="icon-hiking__ranger-01"></span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+    </article>
+
   </section>
 
   <div class="item-6 grid anuncio">
@@ -43,13 +61,11 @@
   </div>
 
     <!-- Article 2  -->
-  <article class="item-6 article--02  body-text" role="article">
-    <div class="container">
-      <div class="">
-        <h3>Blablalba</h3>
-        <p>Cmon</p>
-      </div>
-    </div>
+  <article class="item-6 section--contact" role="article">
+       <p><%= t(:contact_text) %></p>
+       <form action="">
+         
+       </form>
   </article>
     
 </div>
