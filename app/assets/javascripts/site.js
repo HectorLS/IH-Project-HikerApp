@@ -9,7 +9,10 @@ $(document).ready(function(){
     $(".js-over-lightbox").on('click', 'a, button, input[type=submit]', function(e){
       //add here animation to clicked element
       //use e.offsetX y e.offsetY to center the animation in the point clicked
-      console.log(e);
+    });
+
+    $(".link--top").click(function(){
+      $("#js-btn--burguer").click();
     });
 
     function toggleMenu(transitionTime){

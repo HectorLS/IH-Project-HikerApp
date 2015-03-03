@@ -42,7 +42,7 @@ es:
   index_live_the_moment_2: "pero tú encárgate de vivir el momento"
   index_info_points: "Como senderistas, la seguridad es importante en cada viaje, esa es la razón por cual estamos recogiendo todos los puntos seguros en el planeta."
   index_info_points_2: "Va a ser una tarea ardua, pero juntos podemos hacerlo."
-  show_routes: "Muestra tu ruta, para ello simplemente haz click en el botón de abajo."
+  start_now: "Comienza ya a usar Smart-Hiking, para ello simplemente haz click en el botón de abajo."
   follow_us: "Síganos para seguir actualizado"
 
 # $MapView
@@ -76,7 +76,8 @@ es:
 # $routes
   routes_list: "Listado de rutas"
   routes_search: "Busca una ruta para ti"
-  routes_search_description_p1: "Hola Smart Hiker!, aqu´i podrás encontrar una ruta para ti"
+  routes_create: "Crea tu propia ruta"
+  routes_search_description_p1: "¡Hola Smart Hiker!, aquí podrás encontrar una ruta para ti"
   routes_search_description_p2: "Puedes realizar la busqueda por el nombre de ruta, o simplemente buscar rutas en tu ciudad o país."
   here_we_go: "Allá vamos!"
   see_the_map: "Mira la ruta en el mapa"
@@ -85,6 +86,7 @@ es:
   # $Common Words
   next: "Siguiente"
   save: "Guardar"
+  or: "o"
 
 # $Footer
   policy: "Política de privacidad"

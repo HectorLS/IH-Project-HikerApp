@@ -67,24 +67,16 @@
 
         <ul id="js-menu--toggle" class="nav--top_list">
           <li>
-            <a class="link--top" title="<%= t(:services) %>" href="#services">
-              <span><%= t(:services) %></span>
-            </a>
+            <%= link_to t(:routes) , routes_path, :class => "link--top" %>
           </li>
           <li>
-            <a class="link--top" title="<%= t(:routes) %>" href="<%= routes_path %>">
-              <span><%= t(:routes) %></span>
-            </a>
+            <%= link_to t(:services) , {:action => "services", :controller => "site"}, :class => "link--top" %>
           </li>
           <li>
-            <a class="link--top" title="<%= t(:aboutus) %>" href="<%= aboutus_path %>">
-              <span><%= t(:aboutus) %></span>
-            </a>
+            <%= link_to t(:aboutus) , {:action => "home", :controller => "site", :anchor => "aboutus" }, :class => "link--top" %>
           </li>
           <li>
-            <a class="link--top" title="<%= t(:contact) %>" href="<%= contact_path %>">
-              <span><%= t(:contact) %></span>
-            </a>
+            <%= link_to t(:contact) , {:action => "home", :controller => "site", :anchor => "contact" }, :class => "link--top" %>
           </li>
         </ul>
 

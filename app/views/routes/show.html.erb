@@ -1,7 +1,7 @@
 <article class="container_map">
 
   <h4 class="route_title"><%= @route.name %></h4>
-  <summary class="route_desc"><%= @route.city %>(<%= @route.country %>)</summary>
+  <summary class="route_desc"><%= @route.city %> (<%= @route.country %>)</summary>
 
   <div id="map" class="googlemap">
 
@@ -65,15 +65,20 @@
 <script type="text/javascript">
 
 //ELEGIDO
-
+var mapLayers = [];
 $(document).ready(function(){
 
+
   // ZOOM OPTIONS
-  view = new ol.View({
+  var view = new ol.View({
     center: [-6217890.205764902, -1910070.6040274133],
     zoom: 3,
     maxZoom: 18,
     minZoom: 3,
+  });
+
+  view.on('change', function(){
+    
   });
 
 
@@ -129,6 +134,10 @@ $(document).ready(function(){
           })
         });
 
+      gpxFile.on('change', function() {
+        var extent = gpxFile.getSource().getExtent();
+        map.getView().fitExtent(extent, map.getSize());
+      });
 
       var kmlFile = new ol.layer.Vector({
           source: new ol.source.KML({
@@ -136,10 +145,13 @@ $(document).ready(function(){
             url: '<%= layer.kml.url %>'
           })
         });
+
+      mapLayers.push(gpxFile, kmlFile);
       <% end %>
 
+      
 
-
+    
 
   //DEFINO AQUI QUE QUIERO (Zoom, escala etc...)
   var controls = ol.control.defaults().extend([ new ol.control.ScaleLine() ]);
@@ -153,6 +165,8 @@ $(document).ready(function(){
       layers: [mapquest, esri, stamen, gpxFile, kmlFile],
       view: view
   });
+  
+  
   $("#js-canvas-list input[type=radio]").change(function() {
     var layer = $(this).val();
 

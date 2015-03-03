@@ -35,6 +35,12 @@
       }
     }
 
+    .item-#{$i}.no-gap {
+      @include media-query-bp($bp3) {
+        flex:0 0 calc(#{$width});
+      }
+    }
+
     .xs-item-#{$i} {
       flex:0 0 calc(#{$width} - #{$gap})
     }

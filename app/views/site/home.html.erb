@@ -9,27 +9,28 @@
 <!-- Services  -->
 <div class="grid">
 
-  <section class="item-3  section  section--summary" role="region">
+  <section id="aboutus" class="item-3 no-gap  section  section--summary" role="region">
     <div class="wrapper">
-      <h4><%= t(:index_description) %></h4>
       <article class="summary" role="article">
+        <h3><%= t(:index_description) %></h3>
+        <%= image_tag "smart-hiking-mockup.png", class: "mockup", alt: "Smart-Hiking MockUp" %>
         <p><%= t(:index_summary) %></p>
         <p><%= t(:index_summary) %></p>
       </article>
     </div>
   </section>
-  <aside class= "item-3" role="complementary">
+  <aside class= "item-3 no-gap" role="complementary">
     <%= render 'shared/sidebar' %>
   </aside>
 
-  <section class="item-6 section section--intro">
+  <section class="item-6 no-gap section section--intro">
     <div class="intro_title_container">
       <h4><%= t(:index_live_the_moment_1) %></h4>
       <h4><%= t(:index_live_the_moment_2) %></h4>
     </div>
   </section>
 
-  <section class="item-6 grid section section--feature">
+  <section id="features" class="item-6 no-gap grid section section--feature">
 
     <article class="item-2">
       <h2><span class="icon-contact_location-04"></span></h2>
@@ -51,17 +52,24 @@
 
   </section>
 
-  <div class="item-6 grid anuncio">
-    <div class="item-2 bag">
-      <%= image_tag "bag.png", class: "bag_img", alt: "Hiking Bag" %>
-    </div>
-    <aside class="item-4">
-      3232323
+  <div class="item-3 anuncio">
+    <aside class="item-3">
+      <p><%= t(:start_now) %></p>
+      <div class="buttons-container">
+        <a href="<%= routes_path %>">
+          <button class="calltoaction"><%= t(:routes_search) %></button>
+        </a> 
+        <span> <%= t(:or) %></span>
+        <a href="<%= new_route_path %>">
+          <button class="calltoaction" ><%= t(:routes_create) %></button>
+        </a>
+      </div>
     </aside>
   </div>
+  
 
     <!-- Article 2  -->
-  <article class="item-6 section--contact" role="article">
+  <article id="contact" class="item-3 section--contact" role="article">
        <p><%= t(:contact_text) %></p>
        <form action="">
          
