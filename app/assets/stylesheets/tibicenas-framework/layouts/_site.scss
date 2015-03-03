@@ -435,19 +435,14 @@ label input:checked + .input--canvas {
 // =========================================
 
 .section--routes-list {
-  background-color: map-get($brand, secondcolor);
+  background-color: white;
   padding-top: 5%;
-}
-
-.heading--routes {
-  text-align: center;
-  color: $white;
-  margin-bottom: 5%;
 }
 
 .route {
   background-color: rgb(250,250,250);
   padding: 0 1em;
+  border-bottom: 1px solid map-get($brand, textcolor);
 
   .title {
     display: inline-block;
@@ -477,15 +472,43 @@ label input:checked + .input--canvas {
 }
 
 
-
-
-
-
 .img-container {
   display: inline-block;
 }
 
 
+.section--search {
+  background-color: map-get($brand, secondcolor);
+}
+.heading--routes {
+  color: $basecolor;
+  padding-top: 1em;
+  text-align: center;
+  margin-bottom: 3%;
+}
 
+article.intro-text {
+  padding: 1em 2.2em;
+  color: $white;
+}
+
+form p {
+  text-align: center;
+}
+
+#search {
+  display: inline-block;
+  width: 70%;
+}
+
+.search-btn {
+  background-color: map-get($brand, firstcolor);
+  color: $white;
+  border: 0;
+  padding: .6em;
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
 
 

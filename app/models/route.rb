@@ -8,7 +8,10 @@ class Route < ActiveRecord::Base
 	validates :country, presence: true, length: { maximum: 30 }
 	validates :description, presence: true, length: { maximum: 600 }
 
-
+  def self.search(search)
+    search_condition = "%" + search + "%"
+    where('name LIKE ?', search_condition)
+  end
 
 
 end

@@ -24,6 +24,10 @@ class RoutesController < ApplicationController
 		@layer = @route.layers
 	end
 
+	def search
+		@routes = Route.search(params[:search])
+		render 'index'
+	end
 
 	private
 		def route_params
