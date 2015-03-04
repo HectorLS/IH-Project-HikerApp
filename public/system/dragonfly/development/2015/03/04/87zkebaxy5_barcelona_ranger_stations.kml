@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>barcelona_ranger-stations.kml</name>
+	<Style id="sh_ranger_station">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_ranger_station">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_ranger_station">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ranger_station</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ranger_station</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>barcelona_ranger-stations</name>
+		<open>1</open>
+		<Placemark>
+			<name>ranger-station</name>
+			<LookAt>
+				<longitude>2.118023674431402</longitude>
+				<latitude>41.43805061820298</latitude>
+				<altitude>0</altitude>
+				<heading>-4.388440174809437</heading>
+				<tilt>5.776223348483019</tilt>
+				<range>9803.878441312652</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ranger_station</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.101403452511315,41.45058041650667,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ranger-station</name>
+			<LookAt>
+				<longitude>2.173543724980347</longitude>
+				<latitude>41.46897167187501</latitude>
+				<altitude>0</altitude>
+				<heading>-4.349156616941463</heading>
+				<tilt>8.02201336004531</tilt>
+				<range>26166.33085609907</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ranger_station</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.224544148010192,41.4992457060607,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ranger-station</name>
+			<LookAt>
+				<longitude>2.272416241895927</longitude>
+				<latitude>41.43965049830138</latitude>
+				<altitude>0</altitude>
+				<heading>0.06541090452087747</heading>
+				<tilt>0</tilt>
+				<range>65402.78813008367</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ranger_station</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>1.961773392821462,41.7020350565243,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

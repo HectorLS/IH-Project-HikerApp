@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :routes do
         resources :layers
     end
+    resources :markers
     resources :trails
     get '/'         , to: 'site#home', as: 'root'
     post '/search'  , to: 'routes#search'

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>lpgc_ranger-stations.kml</name>
+	<Style id="sh_ranger_station">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>/assets/mapicon_hiking__ranger.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_ranger_station">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>/assets/mapicon_hiking__ranger.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_ranger_station">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ranger_station</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ranger_station</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>ranger-stations</name>
+		<open>1</open>
+		<Placemark>
+			<name>ranger-station</name>
+			<open>1</open>
+			<LookAt>
+				<longitude>-15.56275980562325</longitude>
+				<latitude>27.80663384364361</latitude>
+				<altitude>0</altitude>
+				<heading>-27.53207667885747</heading>
+				<tilt>0.3600386888062651</tilt>
+				<range>46199.17997458018</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ranger_station</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-15.58074082104157,27.9292402295482,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ranger-station</name>
+			<LookAt>
+				<longitude>-15.54256258052318</longitude>
+				<latitude>27.79707035386495</latitude>
+				<altitude>0</altitude>
+				<heading>-17.43591650514035</heading>
+				<tilt>19.63196578714646</tilt>
+				<range>5897.107956693802</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ranger_station</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-15.55005651402048,27.78803140755793,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

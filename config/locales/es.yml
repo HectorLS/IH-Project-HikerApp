@@ -83,10 +83,20 @@ es:
   see_the_map: "Mira la ruta en el mapa"
   most_recently: "Las rutas más recientes"
 
+  # $Markers
+  ranger_stations: "Guarda Forestal"
+  police_stations: "Comisaría de Policía"
+  fire_stations: "Estanción de bomberos"
+  shelters: "Refugio"
+  water_source: "Fuente de Agua"
+  danger_animals: "Animales peligrosos"
+  picnic_areas: "Areas de picnic"
+
   # $Common Words
   next: "Siguiente"
   save: "Guardar"
   or: "o"
+  and: "y"
 
 # $Footer
   policy: "Política de privacidad"

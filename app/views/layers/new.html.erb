@@ -6,15 +6,15 @@
 
 			<div class="form_field">
 				<%= f.label t(:gpx) %>
-				<%= f.file_field :gpx, required: true %>
+				<%= f.file_field :gpx %>
 				<!-- Retiene el visor si el archivo es incorrecto, para que no cargue de nuevo la URL -->
 				<!-- Y simplemente tenga que elegir un archivo válido -->
 				<%= f.hidden_field :retained_gpx %>  
 			</div>
-
+			<span><%= t(:and) %> / <%= t(:or) %></span>
 			<div class="form_field">
 				<%= f.label t(:kml) %>
-				<%= f.file_field :kml, required: true %>
+				<%= f.file_field :kml %>
 				<%= f.hidden_field :retained_kml %>
 			</div>
 

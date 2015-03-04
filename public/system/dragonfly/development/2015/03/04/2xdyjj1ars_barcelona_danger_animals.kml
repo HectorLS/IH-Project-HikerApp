@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>barcelona_danger-animals.kml</name>
+	<StyleMap id="msn_caution">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_caution</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_caution</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_caution">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/caution.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_caution">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/caution.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Folder>
+		<name>barcelona_danger-animals</name>
+		<Placemark>
+			<name>danger-animal</name>
+			<description>Jabalíes</description>
+			<LookAt>
+				<longitude>2.12939749284224</longitude>
+				<latitude>41.42042316051346</latitude>
+				<altitude>0</altitude>
+				<heading>-2.02907497586598</heading>
+				<tilt>9.386425621353682</tilt>
+				<range>2312.083884697155</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_caution</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.124605538339357,41.4198932202841,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>danger-animal</name>
+			<description>Lobos
+Wolves</description>
+			<LookAt>
+				<longitude>2.272416241895927</longitude>
+				<latitude>41.43965049830138</latitude>
+				<altitude>0</altitude>
+				<heading>0.06541090452087747</heading>
+				<tilt>0</tilt>
+				<range>65402.78813008367</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_caution</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>1.947494458179866,41.60191475927747,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

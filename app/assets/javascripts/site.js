@@ -58,4 +58,49 @@ $(document).ready(function(){
 
 
 
+  // Panel Buttons
+
+  // POLICE STATION
+  $(document).on('click', '#js-police', function() {
+    var checkButtonStatus = $(this).hasClass("pushed");
+    myMarkers[0].setVisible(!checkButtonStatus);
+    $(this).toggleClass("pushed");
+  });
+
+  //RANGER
+  $(document).on('click', '#js-ranger', function() {
+    var checkButtonStatus = $(this).hasClass("pushed");
+    myMarkers[1].setVisible(!checkButtonStatus);
+    $(this).toggleClass("pushed");
+  });
+
+  //SHELTER
+  $(document).on('click', '#js-shelter', function() {
+    var checkButtonStatus = $(this).hasClass("pushed");
+    myMarkers[2].setVisible(!checkButtonStatus);
+    $(this).toggleClass("pushed");
+  });
+
+  // DANGER
+  $(document).on('click', '#js-danger', function() {
+    var checkButtonStatus = $(this).hasClass("pushed");
+    myMarkers[3].setVisible(!checkButtonStatus);
+    $(this).toggleClass("pushed");
+  });
+
+  // WATER
+  $(document).on('click', '#js-water', function() {
+    var checkButtonStatus = $(this).hasClass("pushed");
+    myMarkers[4].setVisible(!checkButtonStatus);
+    $(this).toggleClass("pushed");
+  });
+
+
 });
+
+
+
+
+
+
+

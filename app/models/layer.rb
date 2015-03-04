@@ -7,8 +7,8 @@ class Layer < ActiveRecord::Base
 
 
   extend Dragonfly::Model::Validations
-    validates_presence_of :gpx
-    validates_presence_of :kml
+    # validates_presence_of :gpx
+    # validates_presence_of :kml
    
     # Check the file extension
     validates_property :ext, of: :gpx, as: 'gpx'

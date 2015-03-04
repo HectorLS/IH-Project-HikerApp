@@ -32,23 +32,23 @@
   </div>
 
   <section class="map-panel grid buttons--group">
-    <button class="xs-item-1  no-gap btn--machine c_error">
+    <button id="js-danger" class="xs-item-1  no-gap btn--machine c_error">
       <span class="icons icon-nature__bear__claw-01"></span>
     </button>
-    <button class="xs-item-1  no-gap btn--machine c_warning">
+    <button id="js-shelter" class="xs-item-1  no-gap btn--machine c_warning">
       <span class="icons icon-hiking__shelter-01"></span>
     </button>
-    <button class="xs-item-1  no-gap btn--machine c_success">
+    <button id="js-ranger" class="xs-item-1  no-gap btn--machine c_success">
       <span class="icons icon-hiking__ranger-01"></span>
     </button>
-    <button class="xs-item-1  no-gap btn--machine">
+    <button id="js-police" class="xs-item-1  no-gap btn--machine">
       <span class="icons icon-police__badge-01"></span>
     </button>
-    <button class="xs-item-1  no-gap btn--machine c_alert">
+    <button id="js-picnic" class="xs-item-1  no-gap btn--machine c_alert">
       <span class="icons icon-hiking--picnic-area-01"></span>
     </button>
-    <button class="xs-item-1  no-gap btn--machine c_info">
-      <span class="icons icon-contact_info-01"></span>
+    <button id="js-water" class="xs-item-1  no-gap btn--machine c_info">
+      <span class="icons icon-hiking_canteen-01"></span>
     </button>
   </section>
 
@@ -65,7 +65,7 @@
 <script type="text/javascript">
 
 //ELEGIDO
-var mapLayers = [];
+var myMarkers = [];
 $(document).ready(function(){
 
 
@@ -126,30 +126,102 @@ $(document).ready(function(){
 
   // CARGO LOS ARCHIVOS QUE QUIERO
 
-      <% @route.layers.each do |layer| %>
-      var gpxFile = new ol.layer.Vector({
-          source: new ol.source.GPX({
-            projection: ol.proj.get('EPSG:3857'),
-            url: '<%= layer.gpx.url %>'
-          })
-        });
+  //MARKERS
+  <% unless @marker.nil? %>
+    <% unless @marker.police_stations.nil?  %>
 
-      gpxFile.on('change', function() {
-        var extent = gpxFile.getSource().getExtent();
-        map.getView().fitExtent(extent, map.getSize());
+      var PoliceStationMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.police_stations.url %>'
+        })
       });
 
-      var kmlFile = new ol.layer.Vector({
-          source: new ol.source.KML({
-            projection: ol.proj.get('EPSG:3857'),
-            url: '<%= layer.kml.url %>'
-          })
-        });
+    myMarkers.push(PoliceStationMarkers);
 
-      mapLayers.push(gpxFile, kmlFile);
-      <% end %>
+    <% end %>
 
-      
+
+    <% unless @marker.ranger_stations.nil? %>
+
+      var RangerStationMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.ranger_stations.url %>'
+        })
+      });
+      myMarkers.push(RangerStationMarkers);
+
+    <% end %>
+
+    <% unless @marker.shelters.nil? %>
+
+      var SheltersMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.shelters.url %>'
+        })
+      });
+
+      myMarkers.push(SheltersMarkers);
+
+    <% end %>
+
+    <% unless @marker.danger_animal.nil? %>
+
+      var DangerAnimalsMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.danger_animal.url %>'
+        })
+      });
+
+      myMarkers.push(DangerAnimalsMarkers);
+    <% end %>
+
+    <% unless @marker.water_source.nil? %>
+
+      var WaterSourceMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.water_source.url %>'
+        })
+      });
+
+      myMarkers.push(WaterSourceMarkers);
+    <% end %>
+  <% end %>
+
+    $.each(myMarkers, function(key, value) {
+      value.setVisible(false);
+    });
+
+  // RUTA A CARGAR
+  <% @route.layers.each do |layer| %>
+
+    var gpxFile = new ol.layer.Vector({
+      source: new ol.source.GPX({
+        projection: ol.proj.get('EPSG:3857'),
+        url: '<%= layer.gpx.url if layer.gpx %>'
+      })
+    });
+
+
+  // Centra el mapa en la ruta cargada
+  gpxFile.on('change', function() {
+    var extent = gpxFile.getSource().getExtent();
+    map.getView().fitExtent(extent, map.getSize());
+  });
+
+    var kmlFile = new ol.layer.Vector({
+      source: new ol.source.KML({
+        projection: ol.proj.get('EPSG:3857'),
+        url: '<%= layer.kml.url if layer.kml %>'
+      })
+    });
+
+  <% end %>
+
 
     
 
@@ -162,7 +234,7 @@ $(document).ready(function(){
     target: 'map',
     controls: controls,
       renderer: 'canvas',
-      layers: [mapquest, esri, stamen, gpxFile, kmlFile],
+      layers: [mapquest, esri, stamen, gpxFile, kmlFile].concat(myMarkers),
       view: view
   });
   

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226110609) do
+ActiveRecord::Schema.define(version: 20150304105114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,28 @@ ActiveRecord::Schema.define(version: 20150226110609) do
     t.string   "kml_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "markers", force: :cascade do |t|
+    t.string   "area"
+    t.string   "city"
+    t.string   "country"
+    t.string   "ranger_stations_uid"
+    t.string   "ranger_stations_name"
+    t.string   "police_stations_uid"
+    t.string   "police_stations_name"
+    t.string   "fire_stations_uid"
+    t.string   "fire_stations_name"
+    t.string   "danger_animal_uid"
+    t.string   "danger_animal_name"
+    t.string   "water_source_uid"
+    t.string   "water_source_name"
+    t.string   "shelters_uid"
+    t.string   "shelters_name"
+    t.string   "picnic_areas_uid"
+    t.string   "picnic_areas_name"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "rings", force: :cascade do |t|

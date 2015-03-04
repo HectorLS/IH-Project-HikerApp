@@ -72,8 +72,7 @@ $warning--darker     : darken($warning, 20%);
 }
 
 
-.btn--machine.pushed, 
-.btn--machine:hover {
+.btn--machine.pushed {
   border-bottom: 2px solid $bcdark;
   box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.1),
               0 0 0 1px #170c22, 
@@ -104,7 +103,7 @@ $warning--darker     : darken($warning, 20%);
   }
 }
 
-.btn--machine.c_error.pushed, .btn--machine.c_error:hover {
+.btn--machine.c_error.pushed {
   border-bottom: 2px solid $error--darker;
   background-image: linear-gradient($error--dark, $error);
   span::before {
@@ -126,7 +125,7 @@ $warning--darker     : darken($warning, 20%);
   }
 }
 
-.btn--machine.c_success.pushed, .btn--machine.c_success:hover {
+.btn--machine.c_success.pushed {
   border-bottom: 2px solid $success--darker;
   background-image: linear-gradient($success--dark, $success);
   span::before {
@@ -147,7 +146,7 @@ $warning--darker     : darken($warning, 20%);
   }
 }
 
-.btn--machine.c_alert.pushed, .btn--machine.c_alert:hover {
+.btn--machine.c_alert.pushed {
   border-bottom: 2px solid $alert--darker;
   background-image: linear-gradient($alert--dark, $alert);
   span::before {
@@ -168,7 +167,7 @@ $warning--darker     : darken($warning, 20%);
   }
 }
 
-.btn--machine.c_warning.pushed, .btn--machine.c_warning:hover {
+.btn--machine.c_warning.pushed {
   border-bottom: 2px solid $warning--darker;
   background-image: linear-gradient($warning--dark, $warning);
   span::before {
@@ -188,7 +187,7 @@ $warning--darker     : darken($warning, 20%);
   }
 }
 
-.btn--machine.c_info.pushed, .btn--machine.c_info:hover {
+.btn--machine.c_info.pushed {
   border-bottom: 2px solid $info--darker;
   background-image: linear-gradient($info--dark, $info);
   span::before {

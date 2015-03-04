@@ -22,6 +22,7 @@ class RoutesController < ApplicationController
 	def show
 		@route = Route.find params[:id]
 		@layer = @route.layers
+		@marker = Marker.where(country: @route.country, city: @route.city).first
 	end
 
 	def search

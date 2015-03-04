@@ -83,10 +83,20 @@ en:
   see_the_map: "See the route on the map"
   most_recently: "Most recently routes"
 
+# $Markers
+  ranger_stations: "Ranger Stations"
+  police_stations: "Police Stations"
+  fire_stations: "Fire Stations"
+  shelters: "Shelters"
+  water_source: "Water Source"
+  danger_animals: "Danger animals"
+  picnic_areas: "Picnic Areas"
+
 # $Common Words
   next: "Next"
   save: "Save"
   or: "or"
+  and: "and"
 
 # $Footer
   policy: "Privacy policy"

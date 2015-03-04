@@ -247,6 +247,13 @@ aside[role=complementary] {
     text-align: center;
   }
 }
+
+@include media-query-bp($bp3) {
+  .anuncio {
+    background-position-x: -35em;
+  }
+}
+
 .buttons-container {
   text-align: center;
   color: $white;
