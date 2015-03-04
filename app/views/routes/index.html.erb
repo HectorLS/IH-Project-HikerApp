@@ -1,71 +1,34 @@
 
-<article class="container_map">
-	<h4 class="route_title">Nombre de la ruta seleccionada</h4>
-	<summary class="route_desc">Ciudad de la ruta (País)</summary>
-	<div id="map" class="googlemap"></div>
-		<ul class="map-options item-4 grid">
-			<li class="xs-item-1">AAa</li>
-			<li class="xs-item-1">BB</li>
-			<li class="xs-item-1">CC</li>
-			<li class="xs-item-1">44</li>
-			<li class="xs-item-1">55</li>
-			<li class="xs-item-1">666</li>
-			<li class="xs-item-3">777777</li>
-			<li class="xs-item-3">888888</li>
-			<li class="xs-item-2">99999</li>
-			<li class="xs-item-2">110101</li>
-			<li class="xs-item-2">111111</li>
-		</ul>
-</article>
+  <section class="section--search">
 
+    <article class="intro-text">
+      <p><%= t(:routes_search_description_p1) %></p>
+      <p><%= t(:routes_search_description_p2) %></p>
+    </article>
 
-<script>
-  var map = new GMaps({
-    el: '#map',
-    lat: -12.043333,
-    lng: -77.028333,
-  	zoomControl : false,
-  	panControl : false,
-  	streetViewControl : false
-  });
-	  map.addMarker({
-	  lat: -12.043333,
-	  lng: -77.028333,
-	  icon: 'http://icons.iconarchive.com/icons/yellowicon/game-stars/256/Mario-icon.png',
-	  title: 'Lima',
-	  infoWindow: {
-  	content: '<strong>Water</strong><p>Probando</p>'
-		}
-	});
+    <%= form_tag search_path do %>
+      <p>
+        <%= text_field_tag :search %>
+        <%= submit_tag "Search", :name => nil, :class => "search-btn" %>
+      </p>
+    <% end %>
 
+  </section>
 
-// // Geolocation
-// 	GMaps.geolocate({
-// 		success: function(position) {
-// 			map.setCenter(position.coords.latitude, position.coords.longitude);
-// 		},
-// 		error: function(error) {
-// 			alert('Geolocation failed: '+error.message);
-// 		},
-// 		not_supported: function() {
-// 			alert("Your browser does not support geolocation");
-// 		}
-// 	});
+<section class="section--routes-list">
+  <h2 class="heading--routes"><%= t(:routes_list) %></h2>
+  <% @routes.each do |route| %>
+    <article class="route">
+      <div class="img-container">
+        <a title="<%= t(:see_the_map) %>" href="<%= route_path(route.id) %>">
+          <span class="icon-contact_location-04"></span>
+        </a>
+      </div>
 
-// Geo Searcher by latitude and longitude and Address
-// GMaps.geocode({
-//   address: $('#address').val(),
-//   callback: function(results, status) {
-//     if (status == 'OK') {
-//       var latlng = results[0].geometry.location;
-//       map.setCenter(latlng.lat(), latlng.lng());
-//       map.addMarker({
-//         lat: latlng.lat(),
-//         lng: latlng.lng()
-//       });
-//     }
-//   }
-// });
+      <h3 class="title"><%= link_to(route.name, route_path(route.id)) %></h3>
+      <p class="description"><%= route.description %></p>
+      <p class="location"><span><%= route.city %></span> (<%= route.country %>)</p>
+    </article>
+  <% end %>
+</section>
 
-
-</script>

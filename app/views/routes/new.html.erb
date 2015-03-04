@@ -1,0 +1,31 @@
+<section class="form--route">
+	<%= form_for @route do |f| %>
+		<fieldset>
+			<legend>Create the route</legend>
+			<div class="form_field">
+				<%= f.label t(:name) %>
+				<%= f.text_field :name, placeholder: t(:route_name), required: true %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:area) %>
+				<%= f.text_field :area, placeholder: t(:route_area) %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:city) %>
+				<%= f.text_field :city, placeholder: t(:route_city), required: true %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:country) %>
+				<%= f.text_field :country, placeholder: t(:route_country), required: true %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:description) %>
+				<%= f.text_area :description, placeholder: t(:route_description), required: true %>
+			</div>
+
+			<div class="form_field">
+			<%= f.submit t(:save) %>
+			</div>
+		</fieldset>
+	<% end %>
+</section>

@@ -1,0 +1,6 @@
+@each $social-name, $bgcolor in $social-colors {
+  .social-link--#{$social-name}:focus,
+  .social-link--#{$social-name}:hover {
+    background-color: $bgcolor;
+  }
+}

@@ -11,6 +11,7 @@
 @import "lib/mixins.scss";
 @import "lib/flex.scss";
 @import "lib/placeholders.scss";
+@import "lib/function.scss";
 
 
 /* ===== BASE ===== */
@@ -36,10 +37,12 @@
 @import "addons/img.scss";
 @import "addons/navigation.scss";
 @import "addons/notifications.scss";
+
 // @import "addons/pagination.scss";
 
 @import "layouts/site.scss";
 
+@import "addons/social.scss";
 
 // Javascript Effects should be last one to take priority over all
 @import "addons/js-events.scss";

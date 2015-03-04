@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>barcelona_shelter-points.kml</name>
+	<Style id="sn_campground">
+		<IconStyle>
+			<color>ff0055ff</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_campground">
+		<IconStyle>
+			<color>ff0055ff</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_campground0">
+		<IconStyle>
+			<color>ff0543ff</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_campground">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground0">
+		<IconStyle>
+			<color>ff0543ff</color>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_campground0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>barcelona_shelter-points</name>
+		<open>1</open>
+		<Placemark>
+			<name>shelter--cave</name>
+			<LookAt>
+				<longitude>2.128418903359393</longitude>
+				<latitude>41.44519590914781</latitude>
+				<altitude>0</altitude>
+				<heading>-75.10500289366114</heading>
+				<tilt>59.55769598039558</tilt>
+				<range>339.0316682599076</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_campground</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.129207300448066,41.44517103523162,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>shelter--cave</name>
+			<LookAt>
+				<longitude>2.118178109653472</longitude>
+				<latitude>41.44120867797894</latitude>
+				<altitude>0</altitude>
+				<heading>-62.62950508985626</heading>
+				<tilt>39.15447639783083</tilt>
+				<range>1003.414045019346</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_campground0</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.116407235988764,41.4396922158562,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

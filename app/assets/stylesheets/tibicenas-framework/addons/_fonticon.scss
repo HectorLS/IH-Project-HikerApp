@@ -1,32 +1,16 @@
-
-
-
-
-
-
-
-
-
-/*------------------------------------*\
-    $ICONFONT
-\*------------------------------------*/
-
-
 @font-face {
-	font-family: 'YourFontGoHere';
-	// ES: Ruta de tu archivo de fuente de iconos
-	// EN: Your IconFont path
-	src:url('../fonts/YourFontGoHere.eot');
-	src:url('../fonts/YourFontGoHere.eot') format('embedded-opentype'),
-		url('../fonts/YourFontGoHere.woff') format('woff'),
-		url('../fonts/YourFontGoHere.ttf') format('truetype'),
-		url('../fonts/YourFontGoHere.svg') format('svg');
+	font-family: 'icomoon';
+	src:url('/assets/icomoon.eot?rdv96y');
+	src:url('/assets/icomoon.eot?#iefixrdv96y') format('embedded-opentype'),
+		url('/assets/icomoon.woff?rdv96y') format('woff'),
+		url('/assets/icomoon.ttf?rdv96y') format('truetype'),
+		url('/assets/icomoon.svg?rdv96y#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'YourFontGoHere';
+	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -34,23 +18,256 @@
 	text-transform: none;
 	line-height: 1;
 
-	// ES: Mejor renderizado de fuente
-	// EN: Better Font Rendering
-	
+	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* ==== icons classes ====*/
-  // ES: Aquí tienes que pegar la clase para llamar a tu icono.
-  // (viene la información en el archivo de fuentes que uses) Mira el ejemplo de uso:
-	// EN: You have to put here the classes names of your icons
-	// (The process should be explained in a readme file of you font). Check the use example:
-			/*
-			HTML:
-			<span class="icon-mail">Correo</span>
-			CSS:
-			.icon-mail:before {
-				content: "\e601";
-			}
-			*/
+.icon-logo_smart-hiking:before {
+	content: "\e600";
+}
+
+.icon-hl_logo_v1:before {
+	content: "\e601";
+}
+
+.icon-social_pinterest:before {
+	content: "\e602";
+}
+
+.icon-social_gplus:before {
+	content: "\e603";
+}
+
+.icon-social_twitter:before {
+	content: "\e604";
+}
+
+.icon-social_facebook:before {
+	content: "\e605";
+}
+
+.icon-web_help_life-preserver-01:before {
+	content: "\e606";
+}
+
+.icon-hiking_target-01:before {
+	content: "\e607";
+}
+
+.icon-button-up-01:before {
+	content: "\e608";
+}
+
+.icon-button-down-01:before {
+	content: "\e609";
+}
+
+.icon-button-next-01:before {
+	content: "\e60a";
+}
+
+.icon-button-previous-01:before {
+	content: "\e60b";
+}
+
+.icon-desktop_lupa-01:before {
+	content: "\e60c";
+}
+
+.icon-contact_watch-01:before {
+	content: "\e60d";
+}
+
+.icon-web__img-01:before {
+	content: "\e60e";
+}
+
+.icon-contact_landline-01:before {
+	content: "\e60f";
+}
+
+.icon-contact_printer-01:before {
+	content: "\e610";
+}
+
+.icon-contact__mail-01:before {
+	content: "\e611";
+}
+
+.icon-contact_info-01:before {
+	content: "\e612";
+}
+
+.icon-contact_location-03:before {
+	content: "\e613";
+}
+
+.icon-contact_location-04:before {
+	content: "\e614";
+}
+
+.icon-hiking_distance-02:before {
+	content: "\e615";
+}
+
+.icon-hiking_altitude-02:before {
+	content: "\e616";
+}
+
+.icon-hiking__compass-01:before {
+	content: "\e617";
+}
+
+.icon-hiking_canteen-01:before {
+	content: "\e618";
+}
+
+.icon-hospital__symbol:before {
+	content: "\e619";
+}
+
+.icon-fireman__helmet-01:before {
+	content: "\e61a";
+}
+
+.icon-hiking__sos-signal-01:before {
+	content: "\e61b";
+}
+
+.icon-hiking--picnic-area-01:before {
+	content: "\e61c";
+}
+
+.icon-hiking__shelter-01:before {
+	content: "\e61d";
+}
+
+.icon-police__badge-01:before {
+	content: "\e61e";
+}
+
+.icon-nature__bear__claw-01:before {
+	content: "\e61f";
+}
+
+.icon-hiking__ranger-01:before {
+	content: "\e620";
+}
+
+.icon-contact__smartphone-01:before {
+	content: "\e621";
+}
+
+.icon-web_menu-02:before {
+	content: "\e622";
+}
+
+.icon-web_menu-03--align-left:before {
+	content: "\e623";
+}
+
+.icon-social__rss--circle:before {
+	content: "\e624";
+}
+
+.icon-pencil2:before {
+	content: "\e906";
+}
+
+.icon-quill:before {
+	content: "\e907";
+}
+
+.icon-droplet:before {
+	content: "\e90b";
+}
+
+.icon-camera:before {
+	content: "\e90f";
+}
+
+.icon-connection:before {
+	content: "\e91b";
+}
+
+.icon-mic:before {
+	content: "\e91e";
+}
+
+.icon-qrcode:before {
+	content: "\e938";
+}
+
+.icon-location2:before {
+	content: "\e948";
+}
+
+.icon-bubbles2:before {
+	content: "\e96d";
+}
+
+.icon-user:before {
+	content: "\e971";
+}
+
+.icon-hour-glass:before {
+	content: "\e979";
+}
+
+.icon-binoculars:before {
+	content: "\e985";
+}
+
+.icon-search:before {
+	content: "\e986";
+}
+
+.icon-equalizer:before {
+	content: "\e992";
+}
+
+.icon-cog:before {
+	content: "\e994";
+}
+
+.icon-leaf:before {
+	content: "\e9a4";
+}
+
+.icon-earth:before {
+	content: "\e9ca";
+}
+
+.icon-eye:before {
+	content: "\e9ce";
+}
+
+.icon-eye-plus:before {
+	content: "\e9cf";
+}
+
+.icon-eye-minus:before {
+	content: "\e9d0";
+}
+
+.icon-eye-blocked:before {
+	content: "\e9d1";
+}
+
+.icon-sun:before {
+	content: "\e9d4";
+}
+
+.icon-star-empty:before {
+	content: "\e9d7";
+}
+
+.icon-star-half:before {
+	content: "\e9d8";
+}
+
+.icon-star-full:before {
+	content: "\e9d9";
+}
+

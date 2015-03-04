@@ -1,0 +1,314 @@
+<article class="container_map">
+
+  <h4 class="route_title"><%= @route.name %></h4>
+  <summary class="route_desc"><%= @route.city %> (<%= @route.country %>)</summary>
+
+  <div id="map" class="googlemap">
+
+    <button id="js-btn--geolocate" class="btn--geolocate"><span class="icon-hiking_target-01"></span></button>
+    <button id="js-btn--canvas" class="btn--canvas"></button>
+
+    <ul id="js-canvas-list" class="canvas-list">
+      <li>
+        <label class="canvas_labels">
+          <input type="radio" name="canvas-layer" value="mapquest" checked>
+          <span class="input--canvas"></span>
+        </label>
+      </li>
+      <li>
+        <label class="canvas_labels">
+          <input type="radio" name="canvas-layer" value="esri">
+          <span class="input--canvas"></span>
+        </label>
+      </li>
+      <li>
+        <label class="canvas_labels">
+          <input type="radio" name="canvas-layer" value="stamen">
+          <span class="input--canvas"></span>
+        </label>
+      </li>
+    </ul>
+
+  </div>
+
+  <section class="map-panel grid buttons--group">
+    <button id="js-danger" class="xs-item-1  no-gap btn--machine c_error">
+      <span class="icons icon-nature__bear__claw-01"></span>
+    </button>
+    <button id="js-shelter" class="xs-item-1  no-gap btn--machine c_warning">
+      <span class="icons icon-hiking__shelter-01"></span>
+    </button>
+    <button id="js-ranger" class="xs-item-1  no-gap btn--machine c_success">
+      <span class="icons icon-hiking__ranger-01"></span>
+    </button>
+    <button id="js-police" class="xs-item-1  no-gap btn--machine">
+      <span class="icons icon-police__badge-01"></span>
+    </button>
+    <button id="js-picnic" class="xs-item-1  no-gap btn--machine c_alert">
+      <span class="icons icon-hiking--picnic-area-01"></span>
+    </button>
+    <button id="js-water" class="xs-item-1  no-gap btn--machine c_info">
+      <span class="icons icon-hiking_canteen-01"></span>
+    </button>
+  </section>
+
+
+  <ul class="map-options grid">
+    <li class="xs-item-6"><span class="icons icon-hiking__compass-01">40.41415415,-23.343434</span></li>
+    <li class="xs-item-3"><span class="icons icon-hiking_distance-02">23.5 km</span></li>
+    <li class="xs-item-3"><span class="icons icon-hiking_altitude-02">3.2345 m.</span></li>
+  </ul>
+
+
+</article>
+
+<script type="text/javascript">
+
+//ELEGIDO
+var myMarkers = [];
+$(document).ready(function(){
+
+
+  // ZOOM OPTIONS
+  var view = new ol.View({
+    center: [-6217890.205764902, -1910070.6040274133],
+    zoom: 3,
+    maxZoom: 18,
+    minZoom: 3,
+  });
+
+  view.on('change', function(){
+    
+  });
+
+
+
+  // MAPAS DISPONIBLES
+  var mapquest = new ol.layer.Tile({
+    source: new ol.source.MapQuest({ layer: 'osm' }),
+
+    visible: true,
+    name: 'mapquest'
+  });
+
+  var esri = new ol.layer.Tile({
+    source: new ol.source.XYZ({ 
+      attributions: [
+        new ol.Attribution({
+          html: 'Tiles &copy; <a href="http://server.arcgisonline.com/ArcGIS/' + 'rest/services/World_Topo_Map/MapServer"</a>'
+        })
+      ],
+      url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' + 'World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
+    }),
+
+    visible: false,
+    name: 'esri'
+  });
+
+  var stamen = new ol.layer.Group({
+    layers: [
+
+      new ol.layer.Tile({
+        source: new ol.source.Stamen({ layer: 'watercolor' })
+      }),
+
+      new ol.layer.Tile({
+        source: new ol.source.Stamen({ layer: 'terrain-labels' })
+      }),
+
+    ],
+
+    visible: false,
+    name: 'stamen'
+  });
+
+
+
+  // CARGO LOS ARCHIVOS QUE QUIERO
+
+  //MARKERS
+  <% unless @marker.nil? %>
+    <% unless @marker.police_stations.nil?  %>
+
+      var PoliceStationMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.police_stations.url %>'
+        })
+      });
+
+    myMarkers.push(PoliceStationMarkers);
+
+    <% end %>
+
+
+    <% unless @marker.ranger_stations.nil? %>
+
+      var RangerStationMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.ranger_stations.url %>'
+        })
+      });
+      myMarkers.push(RangerStationMarkers);
+
+    <% end %>
+
+    <% unless @marker.shelters.nil? %>
+
+      var SheltersMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.shelters.url %>'
+        })
+      });
+
+      myMarkers.push(SheltersMarkers);
+
+    <% end %>
+
+    <% unless @marker.danger_animal.nil? %>
+
+      var DangerAnimalsMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.danger_animal.url %>'
+        })
+      });
+
+      myMarkers.push(DangerAnimalsMarkers);
+    <% end %>
+
+    <% unless @marker.water_source.nil? %>
+
+      var WaterSourceMarkers = new ol.layer.Vector({
+        source: new ol.source.KML({
+          projection: ol.proj.get('EPSG:3857'),
+          url: '<%= @marker.water_source.url %>'
+        })
+      });
+
+      myMarkers.push(WaterSourceMarkers);
+    <% end %>
+  <% end %>
+
+    $.each(myMarkers, function(key, value) {
+      value.setVisible(false);
+    });
+
+  // RUTA A CARGAR
+  <% @route.layers.each do |layer| %>
+
+    var gpxFile = new ol.layer.Vector({
+      source: new ol.source.GPX({
+        projection: ol.proj.get('EPSG:3857'),
+        url: '<%= layer.gpx.url if layer.gpx %>'
+      })
+    });
+
+
+  // Centra el mapa en la ruta cargada
+  gpxFile.on('change', function() {
+    var extent = gpxFile.getSource().getExtent();
+    map.getView().fitExtent(extent, map.getSize());
+  });
+
+    var kmlFile = new ol.layer.Vector({
+      source: new ol.source.KML({
+        projection: ol.proj.get('EPSG:3857'),
+        url: '<%= layer.kml.url if layer.kml %>'
+      })
+    });
+
+  <% end %>
+
+
+    
+
+  //DEFINO AQUI QUE QUIERO (Zoom, escala etc...)
+  var controls = ol.control.defaults().extend([ new ol.control.ScaleLine() ]);
+
+
+  //CREAMOS EL MAPA y metemos las variables antes definidas
+  var map = new ol.Map({
+    target: 'map',
+    controls: controls,
+      renderer: 'canvas',
+      layers: [mapquest, esri, stamen, gpxFile, kmlFile].concat(myMarkers),
+      view: view
+  });
+  
+  
+  $("#js-canvas-list input[type=radio]").change(function() {
+    var layer = $(this).val();
+
+    map.getLayers().getArray().forEach(function(e) {
+      var name = e.get('name');
+      e.setVisible(name == layer);
+    });
+
+  });
+
+  //GEOLOCATOR y Botón geolocator
+  var geolocation = new ol.Geolocation({
+    projection: view.getProjection(),
+    tracking: true
+  });
+
+  $("#js-btn--geolocate").on('click', function(){
+    var position = geolocation.getPosition();
+
+    var point = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        features: [
+          new ol.Feature({
+            geometry: new ol.geom.Point(position)
+          })
+        ]
+      })
+    });
+    
+    map.addLayer(point);
+    view.setCenter(position);
+    view.setResolution(2.388657133911758);
+    return false;
+  });
+
+
+  //Botón para tipos de mapa
+
+  $("#js-btn--canvas").on('click', function() {
+    $("#js-canvas-list").toggleClass("js-canvas-list");
+    $("#js-canvas-list li").toggleClass("active");
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  mapHeightBig();
+
+  function mapHeightBig() {
+    $("footer").css({"display": "none"});
+    $(".social-area").css({"display": "none"});
+    $(".main-content").css({"height": "95vh"});
+  }
+
+
+
+});
+</script>
+

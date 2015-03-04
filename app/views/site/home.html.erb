@@ -3,51 +3,77 @@
     <div class="container">
       <h1 class="title">Smart Hiking</h1>
       <h2 class="subtitle"><%= t(:index_subtitle) %></h2>
+        <%= image_tag "logo_smart-hiking.svg", class: "logo", alt: "Smart-Hiking Logo" %>
     </div>
 </header>
 <!-- Services  -->
 <div class="grid">
-  <section class="item-4  section  section--summary" role="region">
+
+  <section id="aboutus" class="item-3 no-gap  section  section--summary" role="region">
     <div class="wrapper">
-      <h1>Heading H1</h1>
-      <h2>Heading H2</h2>
-      <h3>Heading H3</h3>
-      <h4>Heading H4</h4>
-      <h5>Heading H5</h5>
-      <h6>Heading H6</h6>
-      <span><%= :hello %></span>
-      <span>Span</span>
       <article class="summary" role="article">
-
-        <p>Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.</p>
-
-        <p>Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca.</p>
-
-        <p>Así que, no debes congojarte por las desgracias que a mí me suceden, pues a ti no te cabe parte dellas. Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro.</p>
-
-        <p>Todas estas borrascas que nos suceden son señales de que presto ha de serenar el tiempo y han de sucedernos bien las cosas; porque no es posible que el mal ni el bien sean durables, y de aquí se sigue que, habiendo durado mucho el mal, el bien está ya cerca. Así que, no debes congojarte por las desgracias que a mí me suceden, pues a ti no</p>
+        <h3><%= t(:index_description) %></h3>
+        <%= image_tag "smart-hiking-mockup.png", class: "mockup", alt: "Smart-Hiking MockUp" %>
+        <p><%= t(:index_summary) %></p>
+        <p><%= t(:index_summary) %></p>
       </article>
     </div>
   </section>
-  <aside class= "item-2" role="complementary">
-    <p>whatever</p>
-    
+  <aside class= "item-3 no-gap" role="complementary">
+    <%= render 'shared/sidebar' %>
   </aside>
-  <section class="item-6 grid section section--feature">
-    <article class="xs-item-4">5</article>
-    <article class="xs-item-1">5</article>
-    <article class="xs-item-1">56565656</article>
+
+  <section class="item-6 no-gap section section--intro">
+    <div class="intro_title_container">
+      <h4><%= t(:index_live_the_moment_1) %></h4>
+      <h4><%= t(:index_live_the_moment_2) %></h4>
+    </div>
   </section>
 
+  <section id="features" class="item-6 no-gap grid section section--feature">
+
+    <article class="item-2">
+      <h2><span class="icon-contact_location-04"></span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+    </article>
+
+    <article class="item-2">
+      <h2><span class="icon-earth"></span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+    </article>
+
+    <article class="item-2">
+      <h2><span class="icon-hiking__ranger-01"></span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+    </article>
+
+  </section>
+
+  <div class="item-3 anuncio">
+    <aside class="item-3">
+      <p><%= t(:start_now) %></p>
+      <div class="buttons-container">
+        <a href="<%= routes_path %>">
+          <button class="calltoaction"><%= t(:routes_search) %></button>
+        </a> 
+        <span> <%= t(:or) %></span>
+        <a href="<%= new_route_path %>">
+          <button class="calltoaction" ><%= t(:routes_create) %></button>
+        </a>
+      </div>
+    </aside>
+  </div>
+  
 
     <!-- Article 2  -->
-  <article class="item-6 article--02  body-text" role="article">
-    <div class="container">
-      <div class="">
-        <h3>Blablalba</h3>
-        <p>Cmon</p>
-      </div>
-    </div>
+  <article id="contact" class="item-3 section--contact" role="article">
+       <p><%= t(:contact_text) %></p>
+       <form action="">
+         
+       </form>
   </article>
     
 </div>

@@ -28,10 +28,10 @@
 
 
 .js-lightbox--active{
-    z-index: 5;
+    z-index: 2000;
 }
 .js-over-lightbox--active{
-    z-index: 10;
+    z-index: 2500;
 }
 .js-block-scroll{
     overflow: hidden;

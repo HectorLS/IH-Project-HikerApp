@@ -57,8 +57,97 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
 @import "organisms/footer.scss";
 
 
+.section--intro {
+  background-image: image-url("bg-03.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  position: relative;
+  // border-bottom: .3em solid $bcdark;
+  width: 100%;
+  height: 400px;
+  margin: 0;
+}
+
+.intro_title_container {
+  position: absolute;
+  text-align: center;
+  color: $white;
+  right: 8%;
+  top: 30%;
+  h4 {
+    text-align: center;
+    font-style: italic;
+    text-shadow: 3px 3px 6px rgba(150, 150, 150, 1);
+  }
+}
+
+
+.grid {
+  background-color: $basecolor;
+}
+
+.section--summary {
+  // background-color: map-get($brand, secondcolor);
+  background-color: $white;
+  padding: 1em 2em;
+  margin-right: 0;
+  margin: 0;
+
+  z-index: 2;
+}
+
+article.summary {
+  h3,
+  p {
+    text-align: center;
+  }
+  
+}
+
+.section--contact {
+    background-image: image-url("bg-04.jpg");
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 500px;
+
+    p {
+    margin: 1em;
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(255,255,255,.3);
+  }
+}
+
+
 .section--feature {
-	background-color: cyan;
+  margin: 0;
+  background-image: image-url("bg-08.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 200px;
+
+  article {
+    background-color: rgba(0,0,0, .4);
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  h2 {
+    font-size: 90px;
+    margin: 0;
+  }
+
+  h2,
+  p {
+    text-align: center;
+    color: $white;
+  }
 }
 
 .main-content {
@@ -87,21 +176,129 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
   margin-right: .4em;
 }
 
+.logo_container--nav {
+  display: inline-block;
+  position: fixed;
+  top: .5%;
+  left: 40%;
+}
+
+
+@include media-query-bp($bp2) {
+  .section--feature {
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+  }
+}
+
+
+
+@include media-query-bp($bp4) {
+   .logo_container--nav {
+    left: 2%;
+   }
+}
+
+
+.logo--nav {
+  height: 2.3em;
+}
+
+
+aside[role=complementary] {
+  padding: 1em 3em;
+  margin-left: 0;
+  margin: 0;
+  border: 0;
+  background-color: $white;
+  // background-color: map-get($brand, firstcolor);
+
+  h3,
+  table.table,
+  tbody, tfoot, thead, tr, th, td {
+    text-align: center;
+  }
+  table.table {
+    margin: 0 auto;
+  }
+  th a {
+    color: map-get($brand, secondcolor);
+  }
+  th{
+    border-bottom: 2px solid  map-get($brand, secondcolor);
+    // border-bottom: 2px solid  map-get($brand, secondcolor);
+  }
+}
+
+.anuncio {
+  background-image: image-url("iphone.jpg");
+  background-position: right;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 500px;
+  aside {
+    background-color: rgba(255,255,255,.3);
+    padding: 2em 1em;
+    margin: 1em;
+  }
+  p {
+    color: $white;
+    text-align: center;
+  }
+}
+
+@include media-query-bp($bp3) {
+  .anuncio {
+    background-position-x: -35em;
+  }
+}
+
+.buttons-container {
+  text-align: center;
+  color: $white;
+  span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.calltoaction {
+  cursor: pointer;
+  border: 0;
+  padding: .6em;
+  background-color: map-get($brand, secondcolor);
+  color: $white;
+  font-weight: bold;
+  display: inline-block;
+  margin: .6em;
+
+}
+
+@include media-query-bp($bp4) {
+  .buttons-container span {
+    display: inline;
+  }
+}
 
 //GMap
+// =========================================
 .container_map {
   width: 100%;
+  height: 100vh;
   background-color: $bclight;
+  position: relative;
 }
 
 
 .googlemap {
   width: 100%;
   height: 70vh;
-  padding-top: 1em;
   border-top: .2em solid $bcdark;
-  border-bottom: .5em solid $bcdark;
+  border-bottom: .1em solid $bcdark;
+  position: relative;
 }
+
 
 .route_title {
   padding-top: .1em;
@@ -117,6 +314,311 @@ I GIVE YOU THE TOOLS, BUT THE DESIGN IT'S UP TO YOU */
   color: $lightergrey;
 }
 
-.map-options li {
-  background-color: yellow;
+
+.map-options {
+  padding-left: 0;
+  margin-top: .2em;
 }
+
+.map-options li {
+  background-image: linear-gradient(rgb(172,215,133),rgb(157,237,86));
+  text-align: right;
+  border: 1px solid $bcdark;
+  box-shadow: inset 9px -10px 11px -5px rgba(0,31,0,.35);
+  padding: .3em;
+  position: relative;
+  span {
+    color: rgb(71,94,50);
+    padding: .6em 0;
+    display: inline-block;
+  }
+}
+
+
+@include media-query-bp($bp2) {
+  .map-options li {
+      text-align: center;
+  }
+ 
+}
+
+
+
+@include media-query-bp($bp3) {
+  .map-options,
+  .map-panel.buttons--group {
+    background: transparent;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
+  }
+}
+
+@include media-query-bp($bp4) {
+  .map-options,
+  .map-panel.buttons--group {
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .map-options {
+    left: 1em;
+  }
+  .map-panel.buttons--group {
+    right: 1em;
+    min-width: 400px;
+  }
+
+  .googlemap {
+    height: 80%;
+  }
+}
+
+.icons {
+  color: $white;
+  cursor: pointer;
+}
+
+
+.icons::before {
+  font-size: 2rem;
+  color: $grey;
+  // padding: .2em;
+}
+.icon-hiking__compass-01::after,
+.icon-hiking_distance-02::after,
+.icon-hiking_altitude-02::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 23px;
+  box-shadow: inset 1px 1px 16px 300px rgba(255, 255, 255, .2);
+  border-radius: 0 0 20px 20px;
+
+}
+
+
+.icon-hiking__compass-01::before,
+.icon-hiking_distance-02::before,
+.icon-hiking_altitude-02::before {
+  position: absolute;
+  color: rgb(71,94,50);
+  left: .4em;
+  top: .12em;
+}
+
+    // MAP BUTTONS
+
+.btn--geolocate {
+  position: absolute;
+  z-index: 20;
+  bottom: .45em;
+  right: 2.6em;
+  font-size: 1.1em;
+  font-weight: bolder;
+  background-color: rgba(0, 60, 136,.49);
+  border: 3.5px solid rgba(255,255,255,.8);
+  border-radius: 1em;
+  color:#eee;
+  text-align:center;
+  padding:2.4px 4px 1.6px 4px;
+
+  &:hover {
+    background-color: rgba(0, 60, 136,.8);
+  }
+}
+
+
+.btn--canvas {
+  position: absolute;
+  z-index: 20;
+  top: .45em;
+  right: 1em;
+  width: 20px;
+  height: 20px;
+  border: 3.5px solid rgba(255,255,255,.8);
+  background-color: rgb(0, 60, 136);
+  border-radius: 50%;
+}
+
+
+.btn--geolocate, 
+.btn--canvas {
+  cursor: pointer;
+}
+
+.btn--canvas {
+  &:active {
+    background-color: map-get($brand, secondcolor);
+  }
+}
+
+.canvas-list {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  top: .45em;
+  right: .94em;
+  transition: 300ms;
+}
+
+
+.js-canvas-list {
+  z-index: 12;
+  opacity: 1;
+
+  li.active:nth-child(1) {
+    margin-top: 2em;
+    transition: 300ms;
+  }
+
+  li.active:nth-child(2) {
+    margin-top: .6em;
+  }
+
+  li.active:nth-child(3) {
+    margin-top: .6em;
+  }
+}
+
+
+@import "molecules/panel-buttons.scss";
+
+//Texto para los inputs
+// .canvas_labels span::before {
+//   content: "Yekale";
+//   margin-left: -55px;
+//   text-align: right;
+//   color: rgb(0, 60, 136);
+// }
+
+.canvas-list input[type="radio"] {
+  display: none;
+}
+
+label input + .input--canvas {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+  background: #33CCCC;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px map-get($brand, secondcolor);
+}
+
+label input:checked + .input--canvas {
+  background: #FF9640;
+  box-shadow: 0 0 0 2px map-get($brand, firstcolor);
+}
+
+
+
+
+
+
+
+
+
+
+
+// $Routes
+// =========================================
+
+.section--routes-list {
+  background-color: white;
+  @include media-query-bp($bp3) {
+    margin: 2em 6em;
+  }
+
+  @include media-query-bp($bp4) {
+    margin: 2em 8em;
+  }
+}
+
+.route {
+  background-color: rgb(250,250,250);
+  padding: 0 1em;
+  border-bottom: 1px solid map-get($brand, textcolor);
+  border-left: 15px solid  map-get($brand, secondcolor);
+  margin-bottom: .9em;
+
+  .title {
+    display: inline-block;
+    text-align: left;
+    padding-top: 1%;
+
+    a {
+      color: map-get($brand, textcolor); 
+    }
+  }
+
+
+
+
+
+
+  .description {
+    margin-bottom: 0;
+  }
+  
+  .location {
+    font-style: italic;
+    text-align: right;
+    padding-bottom: 2%;
+    margin-bottom: 3%;
+  }
+
+  .description,
+  .location {
+    color: map-get($brand, textcolor);
+  }
+}
+
+
+.img-container {
+  display: inline-block;
+}
+
+
+.section--search {
+  background-color: map-get($brand, secondcolor);
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  p {
+    text-align: center;
+  }
+}
+.heading--routes {
+  color: $basecolor;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+article.intro-text {
+  padding: 1em 2.2em;
+  color: $white;
+}
+
+form p {
+  text-align: center;
+}
+
+#search {
+  display: inline-block;
+  width: 70%;
+}
+
+.search-btn {
+  background-color: map-get($brand, firstcolor);
+  color: $white;
+  border: 0;
+  padding: .6em;
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+

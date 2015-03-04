@@ -35,7 +35,13 @@ $breakpoints: (
 ) !default;
 
 
+$brand: (
+  firstcolor: rgb(243,148,36),
+  secondcolor: rgb(5,169,122),
+  textcolor: rgb(93,93,93)
+  ) !default;
 
+// map-get($brand, firstcolor);
 /*------------------------------------*\
     $grid
 \*------------------------------------*/
@@ -220,21 +226,31 @@ $alertwarningtext 	: darken($color-warning, 20%);
  * si hace falta. (también podéis añadir más)  ///////////////////////
  */
 
- 
-$facebook     :   rgb(59,89,182);
-$twitter      :   rgb(64,153,255);
-$googleplus   :   rgb(221,75,57);
-$pinterest    :   rgb(203,32,39);
-$skype        :   rgb(18,165,244);
-$spotify      :   rgb(129,183,26);
-$instagram    :   #4E433C;
-$tumblr       :   #2B4964;
-$vimeo        :   #86B32D;
-$soundcloud   :   #f76600;
-$youtube      :   #FF3333;
-$linkedin     :   #4875B4;
-$flickr       :   #FE0883;
-$foursquare   :   #8FD400;
+$social-colors: (
+  bandcamp: #4e9bac,
+  delicious: #248cff,
+  facebook: rgb(59,89,182),
+  ficly: #b51c2c,
+  flickr: #0063db,
+  foursquare: #8FD400,
+  github: #4183c4,
+  googleplus: rgb(221,75,57),    
+  instagram: #517fa4,    
+  kickstarter: #76cc1e,    
+  lanyrd: #152e51,    
+  lastfm: #d51007,    
+  linkedin: #007bb6,    
+  photodrop: #cdb6e3,    
+  pinterest: rgb(203,32,39),    
+  rdio: #0088da,    
+  skype: rgb(18,165,244),
+  spotify: rgb(129,183,26),
+  soundcloud: #f60,    
+  tumblr: #2B4964,
+  twitter: rgb(64,153,255),    
+  vimeo: #aad450,    
+  youtube: #b00
+);
 
 
 // Badges
@@ -284,3 +300,17 @@ $nav-color:               $secondary;
 $nav-background:          $darkergrey;
 $nav-borders:             lighten($nav-background, 10%);
 $nav-lists-background:    $basecolor;
+
+
+
+
+
+
+// Input options
+
+
+$option-color: #cbd1d8;
+$checked-option-color: map-get($brand, firstcolor);
+$option-size: 40px;
+$explosion-distance: 2; // Multiplied by $option-size
+$explosion-duration: 0.65s;

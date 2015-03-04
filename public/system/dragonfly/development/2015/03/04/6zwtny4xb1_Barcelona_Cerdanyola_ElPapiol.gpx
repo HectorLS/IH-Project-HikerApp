@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1"
+			creator="GMapToGarminGPX.py" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<rte>
+		<name>Barcelona_Cerdanyola-ElPapiol</name>
+		<rtept lat="41.4825557" lon="2.1487794">
+			<name>Point A</name>
+		</rtept>
+		<rtept lat="41.4565692" lon="2.1465399">
+			<name>Point B</name>
+		</rtept>
+		<rtept lat="41.4584755" lon="2.1291031">
+			<name>Point C</name>
+		</rtept>
+		<rtept lat="41.4340221" lon="2.1173201">
+			<name>Point D</name>
+		</rtept>
+		<rtept lat="41.4197386" lon="2.0715107">
+			<name>Point E</name>
+		</rtept>
+		<rtept lat="41.4377023" lon="2.0571327">
+			<name>Point F</name>
+		</rtept>
+		<rtept lat="41.4370072" lon="2.0144172">
+			<name>Point (G)</name>
+		</rtept>
+	</rte>
+</gpx>

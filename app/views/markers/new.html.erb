@@ -1,0 +1,57 @@
+<section class="form--route">
+	<%= form_for @marker do |f| %>
+		<fieldset>
+			<legend>Upload the marker</legend>
+			<div class="form_field">
+				<%= f.label t(:area) %>
+				<%= f.text_field :area, placeholder: t(:route_area) %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:city) %>
+				<%= f.text_field :city, placeholder: t(:route_city), required: true %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:country) %>
+				<%= f.text_field :country, placeholder: t(:route_country), required: true %>
+			</div>
+			<div class="form_field">
+				<%= f.label t(:ranger_stations) %>
+				<%= f.file_field :ranger_stations %>
+				<%= f.hidden_field :retained_ranger_stations %>  
+			</div>
+			<div class="form_field">
+				<%= f.label t(:police_stations) %>
+				<%= f.file_field :police_stations %>
+				<%= f.hidden_field :retained_police_stations %>  
+			</div>
+			<div class="form_field">
+				<%= f.label t(:fire_stations) %>
+				<%= f.file_field :fire_stations %>
+				<%= f.hidden_field :retained_fire_stations %>  
+			</div>
+			<div class="form_field">
+				<%= f.label t(:danger_animals) %>
+				<%= f.file_field :danger_animal %>
+				<%= f.hidden_field :retained_danger_animal %>  
+			</div>
+			<div class="form_field">
+				<%= f.label t(:water_source) %>
+				<%= f.file_field :water_source %>
+				<%= f.hidden_field :retained_water_source %>  
+			</div>
+			<div class="form_field">
+				<%= f.label t(:shelters) %>
+				<%= f.file_field :shelters %>
+				<%= f.hidden_field :retained_shelters %>  
+			</div>
+			<div class="form_field">
+				<%= f.label t(:picnic_areas) %>
+				<%= f.file_field :picnic_areas %>
+				<%= f.hidden_field :retained_picnic_areas %>  
+			</div>
+			<div class="form_field">
+			<%= f.submit t(:save) %>
+			</div>
+		</fieldset>
+	<% end %>
+</section>
