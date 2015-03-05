@@ -11,8 +11,12 @@
         <%= text_field_tag :search %>
         <%= submit_tag "Search", :name => nil, :class => "search-btn" %>
       </p>
-    <% end %>
-
+    <% end %>      
+    <div class="centerbutton">
+      <a href="<%= new_route_path %>">
+        <button class="calltoaction routelist" ><%= t(:routes_create) %></button>
+      </a>
+    </div>
   </section>
 
 <section class="section--routes-list">

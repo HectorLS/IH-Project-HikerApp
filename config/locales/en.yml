@@ -30,6 +30,7 @@ en:
 
 # $Menu
   routes: "Routes"
+  newroute: "New route"
   services: "Services"
   aboutus: "About us"
   contact: "Contact"
@@ -90,6 +91,7 @@ en:
   here_we_go: "Here we go!"
   see_the_map: "See the route on the map"
   most_recently: "Most recently routes"
+  download: "Download this route"
 
 # $Markers
   ranger_stations: "Ranger Stations"

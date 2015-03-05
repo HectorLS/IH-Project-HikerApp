@@ -282,8 +282,12 @@ aside[role=complementary] {
   font-weight: bold;
   display: inline-block;
   margin: .6em;
-
 }
+
+.calltoaction.routelist {
+  background-color: map-get($brand, firstcolor);
+}
+
 
 @include media-query-bp($bp4) {
   .buttons-container span {
@@ -610,7 +614,14 @@ label input:checked + .input--canvas {
   p {
     text-align: center;
   }
+
+  .centerbutton {
+    text-align: center;
+    padding-bottom: 1em;
+  }
 }
+
+
 .heading--routes {
   color: $basecolor;
   text-align: center;

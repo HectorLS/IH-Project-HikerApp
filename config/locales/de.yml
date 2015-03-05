@@ -30,6 +30,7 @@ de:
 
 # $Menu
   routes: "Routen"
+  newroute: "Neu Route"
   services: "Betriebe"
   aboutus: "Über uns"
   contact: "Kontakt"

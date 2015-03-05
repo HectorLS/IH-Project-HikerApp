@@ -30,6 +30,7 @@ es:
 
 # $Menu
   routes: "Rutas"
+  newroute: "Nueva ruta"
   services: "Servicios"
   aboutus: "Sobre nosotros"
   contact: "Contacto"
@@ -89,6 +90,7 @@ es:
   here_we_go: "Allá vamos!"
   see_the_map: "Mira la ruta en el mapa"
   most_recently: "Las rutas más recientes"
+  download: "Descargar esta ruta"
 
   # $Markers
   ranger_stations: "Guarda Forestal"

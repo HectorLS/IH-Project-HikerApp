@@ -17,14 +17,21 @@ header[role=banner] {
 	width: 100%;
 	height: 100vh;
 	position: relative;
+
+	.title,
+	.subtitle {
+		text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+	}
 }
 
 .title,
 .subtitle {
 	text-align: center;
 	color: $white;
-	text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 .title {
 	padding-top: 5em;
