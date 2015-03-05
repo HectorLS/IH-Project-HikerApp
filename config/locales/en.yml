@@ -45,6 +45,11 @@ en:
   start_now: "Start with Smart-Hiking now, just click the below button"
   follow_us: "Follow us to keep updated"
 
+  index_feature_1: "Now the maps with waypoints you really need for your voyage"
+  index_feature_2: "The earth is full of amazing places, will collect and discover together"
+  index_feature_3: "Forget maps with too much information, display only the markers you want, easy"
+
+
 # $MapView
   panel_buttons_explanation: "Use the panel buttons below to activate or desactivate the markers that you want to see"
   map_explanation: "Even You can switch between three map types for a better visualization"
@@ -61,7 +66,10 @@ en:
   city: "City"
   country: "Country"
   description: "Description"
+  contact_us: "Contact with us"
   name: "Name"
+  email: "Email"
+  message: "Message"
   gpx: "Select the .gpx file for this route"
   kml: "Select the .kml file for this route"
   # -- Placeholder
@@ -91,6 +99,17 @@ en:
   water_source: "Water Source"
   danger_animals: "Danger animals"
   picnic_areas: "Picnic Areas"
+  hospital: "Hospital"
+  sos: "SOS"
+
+  service_text_danger: "You're in the nature, and somee animals could be dangerous, but they deserve his own place, so better no disturb them"
+  service_text_shelter: "Problems appear anywhere in anytime, so better be prepared for that and knows some shelters for that cases, sure a good idea"
+  service_text_water: "You need water everyday but maybe you calculate wrong your ration for the voyage, so here we can add the natural water sources you can find on the way"
+  service_text_picnic: "If you want to prepare a bonfire or barbacue, there are some places equipped for that, just use it and be responsible with the environment, it's also your Planet, remember that!"
+  service_text_ranger: "Could be usefull in some cases, they will be always there"
+  service_text_fire: "Fireman to avoid any fire in the forest, don't want any kind of tragedy"
+  service_text_hospital: "An accident?, here will be the nearest point to health you"
+  service_text_sos: "Devices for SOS call points, hope you never have to use it, but if that day arrive better now where they are"
 
 # $Common Words
   next: "Next"

@@ -54,9 +54,14 @@
 
 
   <ul class="map-options grid">
-    <li class="xs-item-6"><span class="icons icon-hiking__compass-01">40.41415415,-23.343434</span></li>
-    <li class="xs-item-3"><span class="icons icon-hiking_distance-02">23.5 km</span></li>
-    <li class="xs-item-3"><span class="icons icon-hiking_altitude-02">3.2345 m.</span></li>
+    <li class="xs-item-6">
+    <% @route.layers.each do |layer| %>
+      <a href="<%= layer.gpx.url if layer.gpx %>"><span class="icons icon-floppy-disk"></span>Download this awesome</a>
+    <% end %>
+    </li>
+  <!--   <li class="js-coordenada xs-item-6"><span class="coordenada icons icon-hiking__compass-01"></span></li> -->
+<!--     <li class="xs-item-3"><span class="icons icon-hiking_distance-02">23.5 km</span></li>
+    <li class="xs-item-3"><span class="icons icon-hiking_altitude-02">3.2345 m.</span></li> -->
   </ul>
 
 
@@ -273,7 +278,48 @@ $(document).ready(function(){
     view.setResolution(2.388657133911758);
     return false;
   });
+// Try
 
+// var element = document.getElementById('popup');
+
+// var popup = new ol.Overlay({
+//   element: element,
+//   positioning: 'bottom-center',
+//   stopEvent: false
+// });
+// map.addOverlay(popup);
+
+//         // display popup on click
+// map.on('click', function(evt) {
+//   var feature = map.forEachFeatureAtPixel(evt.pixel,
+//       function(feature, layer) {
+//         return feature;
+//       });
+//   if (feature) {
+//     var geometry = feature.getGeometry();
+//     var coord = geometry.getCoordinates();
+//     popup.setPosition(coord);
+//     $(element).popover({
+//       'placement': 'top',
+//       'html': true,
+//       'content': feature.get('name')
+//     });
+//     $(element).popover('show');
+//   } else {
+//     $(element).popover('destroy');
+//   }
+// });
+
+//       // change mouse cursor when over marker
+// map.on('pointermove', function(e) {
+//   if (e.dragging) {
+//     $(element).popover('destroy');
+//     return;
+//   }
+//   var pixel = map.getEventPixel(e.originalEvent);
+//   var hit = map.hasFeatureAtPixel(pixel);
+//   map.getTarget().style.cursor = hit ? 'pointer' : '';
+// });
 
   //Botón para tipos de mapa
 

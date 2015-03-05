@@ -1,0 +1,112 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+de:
+
+  language: "de"
+  region: "DE"
+
+# $Greetings
+  hello: "Hello"
+  goodmorning: "Gutten Morgen"
+
+# $Menu
+  routes: "Routen"
+  services: "Betriebe"
+  aboutus: "Über uns"
+  contact: "Kontakt"
+
+# $Index
+  index_subtitle: "Der kluge Weg, einen Routen Meister mit dir"
+  index_description: "Smart-Hiking ist eine Web-Seite, um Wandern Reiserouten rund um die Erde zu schaffen und entdecken"
+  index_summary: "Du wirst deine ROuten mitteilen können und sogar die mit neuen und interessanten Waypoints ergänzen und mit alternative Routen komplementieren"
+  index_live_the_moment_1: "We take care of you"
+  index_live_the_moment_2: "Du kümmerst dich um dein Spass... und lebt den Moment"
+  index_info_points: "Als Wanderer, SIcherheit ist in jeder Reise wichtig, dies ist der Grund warum wir alle sicheren Orten des Planeten sammeln"
+  index_info_points_2: "Eine müshselige Arbeit, aber zusammen können wir es schaffen"
+  start_now: "Fängt an Smart-Hiking zu benutzen. nur einmal in unteren Knopf drücken"
+  follow_us: "Folge uns für neue Updates"
+
+  index_feature_1: "Now the maps with waypoints you really need for your voyage"
+  index_feature_2: "The earth is full of amazing places, will collect and discover together"
+  index_feature_3: "Forget maps with too much information, display only the markers you want, easy"
+
+# $MapView
+  panel_buttons_explanation: "Benutzt das unterliegende Steuerpult zur Aktivierung oder Deaktivierung des Lesezeichens"
+  map_explanation: "Du kannst auch zwischen drei verschiedene Kartenzeichnungen wählen für eine bessere Vollbidanzeige"
+
+# $Contact
+  contact_text: "Bitte zögern sie nicht uns anzurufen , aber zuerst empfehlen wir einen Blick in den Bereich von F.A.Q werfen, vermutlich wurde ihre Problem schon gelöst"
+
+# $Services
+  gpx_explanation: "Lade deine angehängte . GPX Datei des letzten Wochenendes hoch, bearbeite ein waypoints, füge deine Kommentare ein; und teile sie!"
+
+# $Form
+  # -- Fields
+  area: "Gebiet"
+  city: "Stadt"
+  country: "Land"
+  description: "Beschreibung"
+  contact_us: "Kontaktieren Sie mit uns"
+  name: "Name"
+  email: "Email"
+  message: "Nachricht"
+  gpx: "Wähle dein .gpx Datei für diese Route"
+  kml: "Wähle dein .kml Datei für diese Route"
+  # -- Placeholder
+  route_area: "Routengebiet"
+  route_city: "Routenstadt"
+  route_country: "Routenland"
+  route_description: "Routebeschreibung"
+  route_name: "Routename"
+  # -- Flash Messages
+  layer_saved_success: "Es wurde Korrekt gespeichert!"
+
+# $Routes
+  routes_list: "Routenliste"
+  routes_search: "Suche eine ROute für dich"
+  routes_create: "Erschaffe deine eigene Route"
+  routes_search_description_p1: "Hallo Smart Hiker!, hier findest du eine Route für dich."
+  routes_search_description_p2: "Du kannst die Suche nach den Pfadname starten, oder suche einfach Pfade nach deiner Stadt oder dein Land"
+  here_we_go: "los geht's!"
+  see_the_map: "Guck deine Routen auf die Karte"
+  most_recently: "Zuletzt Routen"
+
+# $Markers
+  ranger_stations: "Rangerstation"
+  police_stations: "Polizeistation"
+  fire_stations: "Feuetwehrstations"
+  shelters: "Berghütte"
+  water_source: "Springbrunnen"
+  danger_animals: "Gefährliche Tierre"
+  picnic_areas: "Picnic Zone"
+
+# $Common Words
+  next: "Nächste"
+  save: "Speichern"
+  or: "oder"
+  and: "und"
+
+# $Footer
+  policy: "Datenschutzrichtlinie"
+  terms_of_use: "Nutzungsbedingungen"
+  faq: "F.A.Q."
+  author: "Autor"

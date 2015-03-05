@@ -45,6 +45,10 @@ es:
   start_now: "Comienza ya a usar Smart-Hiking, para ello simplemente haz click en el botón de abajo."
   follow_us: "Síganos para seguir actualizado"
 
+  index_feature_1: Ahora tú mapa con los waypoints que de verdad necesitas durante tu viaje"
+  index_feature_2: "La Tierra está llena de lugares asombrosos, vamos a recopilarlos y descubrirlos juntos"
+  index_feature_3: "Olvídate de mapas sobrecargados de información, muestra sólo aquellos markers que quieras, sencillo"
+
 # $MapView
   panel_buttons_explanation: "Usa el panel de botones inferior para activar o desactivar los marcadores que quieras ver."
   map_explanation: "Incluso puedes cambiar entre tres tipos de mapa para una mejor visualización."
@@ -61,7 +65,10 @@ es:
   city: "Ciudad"
   country: "País"
   description: "Descripción"
+  contact_us: "Contacta con nosotros"
   name: "Nombre"
+  email: "Email"
+  message: "Mensaje"
   gpx: "Selecciona el archivo .gpx para esta ruta"
   kml: "Selecciona el archivo .kml para esta ruta"
   # -- Placeholder
@@ -91,6 +98,17 @@ es:
   water_source: "Fuente de Agua"
   danger_animals: "Animales peligrosos"
   picnic_areas: "Areas de picnic"
+  hospital: "Hospital"
+  sos: "SOS"
+
+  service_text_danger: "Estás en medio de la naturaleza, y algunos animales pueden ser peligrosos, pero ellos merecen tener un territorio, mejor no molestarlos"
+  service_text_shelter: "Los problemas aparecen en cualquier momento, en cualquier lugar, así que mejor estar preparado para ello y saber donde hay un refugio en esos casos, seguro una buena idea"
+  service_text_water: "Necesitas agua todos los días, pero puede que calcularas mal la ración para el viaje, aquí añadiremos las fuentes de agua naturales para que puedas encontrarlas por camino"
+  service_text_picnic: "Sí quieres phacer una hoguera o barbacoa, hay algunos lugares equipados para ello, así que úsalos y sé responsable con tu entorno, también es tu planeta, ¡Recuérdalo!"
+  service_text_ranger: "Pueden ser muy útiles en algunos casos, y siempren estarán ahí"
+  service_text_fire: "Bomberos para evitar rápidamente cualquier incendio, no queremos ningún tipo de tragedia"
+  service_text_hospital: "¿Un accidente?, aquí estarán los puntos más cercanos donde poder tener atención médica"
+  service_text_sos: "Dispositivos para llamadas de socorro SOS, esperamos que nunca tengas que usarlos, pero si ese día llegase, mejor saber dónde están"
 
   # $Common Words
   next: "Siguiente"

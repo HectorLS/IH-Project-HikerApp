@@ -107,18 +107,28 @@ article.summary {
 }
 
 .section--contact {
-    background-image: image-url("bg-04.jpg");
-    background-position: left;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 500px;
-
-    p {
-    margin: 1em;
+  background-image: image-url("bg-04.jpg");
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  .form--contact {
     text-align: center;
+    margin: 1em;
     padding: 1em;
-    background-color: rgba(255,255,255,.3);
+
+    textarea {
+      min-height: 80px;
+      max-height: 165px;
+    }
+  }
+
+  p {
+  margin: 1em;
+  text-align: center;
+  padding: 1em;
+  background-color: rgba(255,255,255,.3);
   }
 }
 
@@ -281,6 +291,8 @@ aside[role=complementary] {
   }
 }
 
+
+
 //GMap
 // =========================================
 .container_map {
@@ -325,12 +337,14 @@ aside[role=complementary] {
   text-align: right;
   border: 1px solid $bcdark;
   box-shadow: inset 9px -10px 11px -5px rgba(0,31,0,.35);
-  padding: .3em;
+  padding: .6em;
   position: relative;
+  a {
+    color: rgb(71,94,50);
+  }
   span {
     color: rgb(71,94,50);
     padding: .6em 0;
-    display: inline-block;
   }
 }
 
@@ -363,10 +377,11 @@ aside[role=complementary] {
   }
 
   .map-options {
-    left: 1em;
+    left: 2em;
+    min-width: 400px;
   }
   .map-panel.buttons--group {
-    right: 1em;
+    right: 2em;
     min-width: 400px;
   }
 
@@ -388,7 +403,8 @@ aside[role=complementary] {
 }
 .icon-hiking__compass-01::after,
 .icon-hiking_distance-02::after,
-.icon-hiking_altitude-02::after {
+.icon-hiking_altitude-02::after,
+.icon-floppy-disk::after {
   content: "";
   position: absolute;
   top: 0;
@@ -403,13 +419,17 @@ aside[role=complementary] {
 
 .icon-hiking__compass-01::before,
 .icon-hiking_distance-02::before,
-.icon-hiking_altitude-02::before {
+.icon-hiking_altitude-02::before,
+.icon-floppy-disk::before {
   position: absolute;
   color: rgb(71,94,50);
   left: .4em;
   top: .12em;
 }
 
+.icon-floppy-disk {
+  height: 30px;
+}
     // MAP BUTTONS
 
 .btn--geolocate {
@@ -622,3 +642,48 @@ form p {
 }
 
 
+//Services
+
+.section--services {
+  background-image: image-url("asleep-forest.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  width: 100%;
+  height: 95vh;
+}
+
+
+.service.grid {
+  background: transparent;
+  color: $white;
+  .service-text-container {
+    background-color: rgba(255,255,255,.2);
+    padding: 1em .3em;
+    p {
+      margin: 0;
+    }
+  }
+  .icon-service {
+    font-size: 5em;
+
+    @include media-query-bp($bp2) {
+      font-size: 8em;
+    }
+
+     @include media-query-bp($bp3) {
+      font-size: 5.5em;
+    }
+
+    @include media-query-bp($bp4) {
+      font-size: 9.5em;
+    }
+  }
+
+  .service-text,
+  .icon-container {
+    min-height: 5em;
+    height: 100%;
+  }
+}

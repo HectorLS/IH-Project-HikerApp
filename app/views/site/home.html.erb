@@ -15,7 +15,8 @@
         <h3><%= t(:index_description) %></h3>
         <%= image_tag "smart-hiking-mockup.png", class: "mockup", alt: "Smart-Hiking MockUp" %>
         <p><%= t(:index_summary) %></p>
-        <p><%= t(:index_summary) %></p>
+        <p><%= t(:index_info_points) %></p>
+        <p><%= t(:index_info_points_2) %></p>
       </article>
     </div>
   </section>
@@ -34,20 +35,17 @@
 
     <article class="item-2">
       <h2><span class="icon-contact_location-04"></span></h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+      <p><%= t(:index_feature_1) %></p>
     </article>
 
     <article class="item-2">
       <h2><span class="icon-earth"></span></h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+      <p><%= t(:index_feature_2) %></p>
     </article>
 
     <article class="item-2">
       <h2><span class="icon-hiking__ranger-01"></span></h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-      <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+      <p><%= t(:index_feature_3) %></p>
     </article>
 
   </section>
@@ -70,10 +68,23 @@
 
     <!-- Article 2  -->
   <article id="contact" class="item-3 section--contact" role="article">
-       <p><%= t(:contact_text) %></p>
-       <form action="">
-         
-       </form>
+    <p><%= t(:contact_text) %></p>
+    <form action="" class="form--contact">
+      <fieldset>
+        <div class="form_field">
+          <input type="text" placeholder="<%= t(:name) %>">
+        </div>
+        <div class="form_field">
+          <input type="text" placeholder="<%= t(:email) %>">
+        </div>
+        <div class="form_field">
+          <textarea form="form_id" placeholder="<%= t(:message) %>"></textarea>
+        </div>
+        <div class="form_field">
+          <button class="calltoaction" ><%= t(:contat_us) %></button>
+        </div>
+      </fieldset>
+    </form>
   </article>
     
 </div>
