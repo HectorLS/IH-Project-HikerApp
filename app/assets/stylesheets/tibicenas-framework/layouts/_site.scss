@@ -614,7 +614,6 @@ label input:checked + .input--canvas {
   p {
     text-align: center;
   }
-
   .centerbutton {
     text-align: center;
     padding-bottom: 1em;
@@ -647,9 +646,13 @@ form p {
   color: $white;
   border: 0;
   padding: .6em;
-  display: inline-block;
+  display: none;
   width: 30%;
   text-align: right;
+  @include media-query-bp($bp2) {
+    display: inline-block;
+  }
+  
 }
 
 

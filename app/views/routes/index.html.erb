@@ -1,14 +1,14 @@
 
   <section class="section--search">
 
-    <article class="intro-text">
+    <article id="show-intro-text" class="intro-text">
       <p><%= t(:routes_search_description_p1) %></p>
       <p><%= t(:routes_search_description_p2) %></p>
     </article>
 
     <%= form_tag search_path do %>
       <p>
-        <%= text_field_tag :search %>
+        <%= text_field_tag :search, nil, id: "search", class: "search-field", placeholder: t(:routes_search) %>  <!-- Nil es el value del input search, y hay que ponerlo siempre, si no queremos darle value, ponemos nil-->
         <%= submit_tag "Search", :name => nil, :class => "search-btn" %>
       </p>
     <% end %>      
